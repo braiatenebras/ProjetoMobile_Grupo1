@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melodia - Criar Conta</title>
-    <link rel="stylesheet" href="criarconta.css">
+    <title>Melodia - Recuperar Senha</title>
+    <link rel="stylesheet" href="esqueciasenha.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-    <!-- Seta de voltar -->
+    <!-- seta de voltar -->
     <a href="../../index.html" class="voltar-link">
         <i class="fas fa-arrow-left"></i>
     </a>
@@ -26,51 +26,52 @@
     <div class="container">
         <div class="caixa-login">
             <div class="logo">
-                <h1>Crie sua Conta</h1>
+                <h1>Recupere sua senha</h1>
             </div>
 
-            <p class="subtitulo">Registre suas informações nos campos abaixo:</p>
+            <p class="subtitulo">Insira suas informações nos campos abaixo para enviar um email ou SMS para redefinição
+                de sua
+                senha!</p>
 
-            <form class="formulario-login" id="formLogin">
-                <div class="grupo-input">
-                    <i class="fa solid fa-circle-user icone"></i>
-                    <input type="text" placeholder="Nome" required>
-                </div>
-
+            <form class="formulario-login" id="formRecuperacao">
                 <div class="grupo-input">
                     <i class="fas fa-envelope icone"></i>
-                    <input type="email" placeholder="E-mail" required>
+                    <input type="email" id="email" placeholder="Endereço de E-mail">
                 </div>
 
-                <div class="grupo-input">
-                    <i class="fas fa-lock icone"></i>
-                    <input type="password" id="senha" placeholder="Senha" required>
-                </div>
-
-                <div class="grupo-input">
-                    <i class="fas fa-lock icone"></i>
-                    <input type="password" id="confirmarSenha" placeholder="Confirme sua Senha" required>
-                </div>
+                <h1 class="ou-separador"> Ou </h1>
 
                 <div class="grupo-input">
                     <i class="fa-solid fa-phone icone"></i>
-                    <input type="tel" id="telefone" placeholder="Número de telefone" required>
+                    <input type="tel" id="telefone" placeholder="Número de Telefone">
                 </div>
 
-                <button type="submit" class="botao-login">Criar Conta</button>
+                <button type="submit" class="botao-login">Enviar Email ou SMS</button>
+                <button type="button" id="botaoAltereiSenha" class="botao-alterei-senha">Alterei a Senha</button>
             </form>
         </div>
     </div>
 
-    <!-- Tela de Loading -->
+    <!-- tela de Loading -->
     <div class="tela-loading" id="telaLoading">
         <div class="loading-conteudo">
             <div class="loading-spinner"></div>
-            <p>Carregando...</p>
+            <p>Redirecionando...</p>
         </div>
     </div>
 
-    <script src="criarconta.js"></script>
+    <!-- modal de Sucesso -->
+    <div class="modal-sucesso" id="modalSucesso">
+        <div class="modal-conteudo">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Sucesso!</h2>
+            <p>Sua senha foi alterada com sucesso.</p>
+        </div>
+    </div>
+
+    <script src="esqueciasenha.js"></script>
 </body>
 
 </html>

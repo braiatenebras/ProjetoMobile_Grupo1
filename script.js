@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // Função para mostrar modal de login social
+    // função para mostrar modal de login social
     function mostrarModalLogin(servico, icone, cor) {
         const modal = document.createElement('div');
         modal.className = 'modal-simulacao';
