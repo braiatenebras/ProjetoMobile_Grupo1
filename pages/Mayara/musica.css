@@ -1,0 +1,93 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  /* Fundo com gradiente animado */
+  background: linear-gradient(270deg, #000080, #4B0082, #8A2BE2, #4B0082);
+  background-size: 800% 800%;
+  animation: gradientAnimation 20s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  margin: 0;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  user-select: none;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  z-index: 10;
+}
+
+  .bluetooth-icon {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 50%;
+    padding: 8px;
+    cursor: default;
+    user-select: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 50;
+    transition: background 0.3s;
+  }
+  .bluetooth-icon:hover {
+    background: rgba(0,0,0,0.6);
+  }
+
+/* Botão Play/Pause */
+#playPauseBtn {
+  position: fixed;
+  bottom: 80px;
+  right: 15px;
+  background: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.3s;
+  z-index: 60;
+  padding: 0;
+}
+#playPauseBtn:hover {
+  background: #f0f0f0;
+}
+#playPauseBtn svg {
+  fill: #333333;
+  width: 28px;
+  height: 28px;
+}
