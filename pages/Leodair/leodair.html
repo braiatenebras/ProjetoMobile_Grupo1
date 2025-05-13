@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodia - Músicas</title>
+    <link rel="stylesheet" href="leodair.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+        <!-- seta de voltar -->
+    <a href="/index.html" class="voltar-link">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    <div class="fundo-musical">
+        <div class="nota-musical" style="--i:1"><i class="fas fa-music"></i></div>
+        <div class="nota-musical" style="--i:2"><i class="fas fa-music"></i></div>
+        <div class="nota-musical" style="--i:3"><i class="fas fa-music"></i></div>
+        <div class="nota-musical" style="--i:4"><i class="fas fa-music"></i></div>
+        <div class="nota-musical" style="--i:5"><i class="fas fa-music"></i></div>
+    </div>
+
+
+    <div class="container">
+        <h1>Pesquisar Músicas</h1>
+        <div class="caixa-pesquisa">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Digite o nome da música ou artista...">
+                <button onclick="searchSongs()">
+                    <i class="fas fa-search"></i> Pesquisar
+                </button>
+            </div>
+            <div id="results"></div>
+        </div>
+    </div>
+    >
+    <script src="script.js"></script>
+</body>
+
+</html>

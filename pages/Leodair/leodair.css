@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  color: white;
+  min-height: 100vh;
+}
+
+.fundo-musical {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.nota-musical {
+  position: absolute;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.1);
+  animation: flutuarNota 15s linear infinite;
+  animation-delay: calc(var(--i) * -3s);
+}
+
+@keyframes flutuarNota {
+  0% {
+    transform: translateY(100vh) scale(0.5);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.3;
+  }
+
+  90% {
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* ===== LAYOUT PRINCIPAL ===== */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+h1 {
+  color: #673ab7;
+  font-size: 2rem;
+}
+
+/* ===== CAIXA DE PESQUISA ===== */
+.caixa-pesquisa {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 20px;
+  border: none;
+  background: #282828;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #673ab7;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #9c27b0;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: purple;
+  transform: translateY(-2px);
+}
+/* Seta de voltar */
+.voltar-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    z-index: 100;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.voltar-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-3px);
+}
+
+/* ===== RESULTADOS ===== */
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.song {
+  background: #282828;
+  border-radius: 10px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.song:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* imagem da musica */
+.song img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+/* titulo musica */
+.song h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* artista */
+.song p {
+  color: #b3b3b3;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 10px;
+  }
+
+  .caixa-pesquisa {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  #results {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
