@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.body.removeChild(mensagem);
                 }
                 // levar para outra tela
-                window.location.href = "home.html";
+                window.location.href = "pages/Ana/landingpage.html";
             }, 500);
         }, 3000);
     }
