@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (tipo === 'sucesso') {
                     telaLoading.classList.add('ativo');
                     setTimeout(() => {
-                        window.location.href = "../../index.html";
+                        window.location.href = "login.html";
                     }, 1000);
                 }
             }, 500);
