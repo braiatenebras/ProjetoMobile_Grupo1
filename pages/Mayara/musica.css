@@ -11,7 +11,7 @@ html, body {
 }
 body {
   /* Fundo com gradiente animado */
-  background: linear-gradient(270deg, #000080, #4B0082, #8A2BE2, #4B0082);
+  background: linear-gradient(270deg, #0f3460, #4B0082, #0f3460, #4B0082);
   background-size: 800% 800%;
   animation: gradientAnimation 20s ease infinite;
   height: 100vh;
@@ -51,7 +51,7 @@ h3 {
     position: fixed;
     bottom: 15px;
     right: 15px;
-    background: rgba(0,0,0,0.4);
+   
     border-radius: 50%;
     padding: 8px;
     cursor: default;
@@ -82,12 +82,23 @@ h3 {
   transition: background 0.3s;
   z-index: 60;
   padding: 0;
+
 }
 #playPauseBtn:hover {
-  background: #f0f0f0;
+  background: #241178;
 }
 #playPauseBtn svg {
   fill: #333333;
   width: 28px;
   height: 28px;
+}
+#playPauseBtn {
+width: 17%;
+position: fixed;
+bottom: 100px;
+left: 50%;
+transform: translateX(-50%);
+display: flex;
+justify-content: center;
+pointer-events: auto;
 }
