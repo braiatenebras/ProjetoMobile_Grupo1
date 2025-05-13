@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melodia - Login</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Melodia - Criar Conta</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -17,51 +17,23 @@
         <div class="nota-musical" style="--i:4"><i class="fas fa-music"></i></div>
         <div class="nota-musical" style="--i:5"><i class="fas fa-music"></i></div>
     </div>
-
     <div class="container">
         <div class="caixa-login">
-            <div class="logo">
-                <i class="fas fa-headphones"></i>
-                <h1>Melodia</h1>
-            </div>
+            <!-- criando botões e colocando icons -->
+            <button type="button" class="fa-solid fa-user-plus cadastro" onclick="window.location.href='pages/Bryan/criarconta.html'"> Se cadastre</button>
+            <button type="button" class="fa solid fa-circle-user entrar" onclick="window.location.href='pages/Bryan/login.html'"> Entrar</button>
 
-            <p class="subtitulo">Milhões de músicas. Um só lugar.</p>
-
-            <form class="formulario-login" id="formLogin">
-                <div class="grupo-input">
-                    <i class="fas fa-envelope icone"></i>
-                    <input type="email" placeholder="E-mail" required>
-                </div>
-
-                <div class="grupo-input">
-                    <i class="fas fa-lock icone"></i>
-                    <input type="password" id="senha" placeholder="Senha" required>
-                    <i class="fa-solid fa-eye alternar-senha" id="alternarSenha"></i>
-                </div>
-
-                <button type="submit" class="botao-login">Entrar</button>
-
-                <div class="divisor">
-                    <span>ou</span>
-                </div>
-
-                <button type="button" class="botao-social google" id="btnGoogle">
-                    <i class="fab fa-google"></i> Continuar com Google
-                </button>
-
-                <button type="button" class="botao-social apple" id="btnApple">
-                    <i class="fab fa-apple"></i> Continuar com Apple
-                </button>
-
-                <div class="links">
-                    <a href="pages/Bryan/esqueciasenha.html">Esqueceu a senha?</a>
-                    <a href="pages/Bryan/criarconta.html">Criar conta</a>
-                </div>
-            </form>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Tela de Loading -->
+    <div class="tela-loading" id="telaLoading">
+        <div class="loading-conteudo">
+            <div class="loading-spinner"></div>
+            <p>Carregando...</p>
+        </div>
+    </div>
+
 </body>
 
 </html>
