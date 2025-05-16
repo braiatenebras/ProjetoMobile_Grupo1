@@ -1,0 +1,440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: white;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.fundo-musical {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.nota-musical {
+    position: absolute;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.1);
+    animation: flutuarNota 15s linear infinite;
+    animation-delay: calc(var(--i) * -3s);
+}
+
+@keyframes flutuarNota {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.3;
+    }
+
+    90% {
+        opacity: 0.3;
+    }
+
+    100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+    }
+}
+/* Seta de voltar */
+.voltar-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    z-index: 100;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.voltar-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-3px);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.caixa-login {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.caixa-login:hover {
+    transform: translateY(-5px);
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo i {
+    font-size: 50px;
+    color: #6a0dad;
+    margin-bottom: 15px;
+}
+
+.logo h1 {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(to right, #9c27b0, #673ab7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitulo {
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+}
+
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grupo-input {
+    position: relative;
+}
+
+.grupo-input .icone {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.grupo-input input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: #9c27b0;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.alternar-senha {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+}
+
+.botao-login {
+    background: linear-gradient(45deg, #9c27b0, #673ab7);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(156, 39, 176, 0.3);
+}
+
+.botao-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
+}
+
+.botao-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+.botao-social:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.botao-social.google i {
+    color: #db4437;
+}
+
+.botao-social.apple i {
+    color: #a2aaad;
+}
+
+.divisor {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
+
+.divisor::before,
+.divisor::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.divisor::before {
+    margin-right: 10px;
+}
+
+.divisor::after {
+    margin-left: 10px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #9c27b0;
+}
+
+/* modal de simulação */
+.modal-simulacao {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.modal-conteudo {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.modal-conteudo::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    transform: rotate(30deg);
+    z-index: -1;
+}
+
+.modal-cabecalho {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.modal-cabecalho i {
+    font-size: 24px;
+}
+
+.modal-cabecalho h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.modal-conteudo p {
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+}
+
+.modal-botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-botoes button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modal-cancelar {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.modal-cancelar:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.modal-confirmar {
+    background: #4285F4;
+    border: none;
+    color: white;
+}
+
+.modal-confirmar:hover {
+    background: #3367D6;
+}
+
+/* mensagem de sucesso */
+.mensagem-sucesso {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    animation: slideIn 0.5s ease;
+}
+
+.mensagem-conteudo {
+    background: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.mensagem-conteudo i {
+    font-size: 20px;
+}
+
+/* ------- animações ------- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.modal-simulacao.fade-out,
+.mensagem-sucesso.fade-out {
+    animation: fadeOut 0.5s ease forwards;
+}
+
+/*-------  RESPONSIVIDADE -------*/
+@media (max-width: 480px) {
+    .caixa-login {
+        padding: 30px 20px;
+    }
+
+    .logo i {
+        font-size: 40px;
+    }
+
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .grupo-input input {
+        padding: 12px 12px 12px 40px;
+    }
+
+    .modal-conteudo {
+        padding: 20px;
+        width: 95%;
+    }
+
+    .modal-botoes {
+        flex-direction: column;
+    }
+
+    .modal-botoes button {
+        width: 100%;
+    }
+}

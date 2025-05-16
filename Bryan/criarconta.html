@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodia - Criar Conta</title>
+    <link rel="stylesheet" href="criarconta.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- seta de voltar -->
+    <a href="login.html" class="voltar-link">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <div class="fundo-musical">
+        <div class="nota-musical" style="--i:1"><i class="fas fa-music"></i></div>
+        <div class="nota-musical" style="--i:2"><i class="fas fa-music"></i></div>
+        <div class="nota-musical" style="--i:3"><i class="fas fa-music"></i></div>
+        <div class="nota-musical" style="--i:4"><i class="fas fa-music"></i></div>
+        <div class="nota-musical" style="--i:5"><i class="fas fa-music"></i></div>
+    </div>
+
+    <div class="container">
+        <div class="caixa-login">
+            <div class="logo">
+                <h1>Crie sua Conta</h1>
+            </div>
+
+            <p class="subtitulo">Registre suas informações nos campos abaixo:</p>
+
+            <form class="formulario-login" id="formLogin">
+                <div class="grupo-input">
+                    <i class="fa solid fa-circle-user icone"></i>
+                    <input type="text" placeholder="Nome" required>
+                </div>
+
+                <div class="grupo-input">
+                    <i class="fas fa-envelope icone"></i>
+                    <input type="email" placeholder="E-mail" required>
+                </div>
+
+                <div class="grupo-input">
+                    <i class="fas fa-lock icone"></i>
+                    <input type="password" id="senha" placeholder="Senha" required>
+                </div>
+
+                <div class="grupo-input">
+                    <i class="fas fa-lock icone"></i>
+                    <input type="password" id="confirmarSenha" placeholder="Confirme sua Senha" required>
+                </div>
+
+                <div class="grupo-input">
+                    <i class="fa-solid fa-phone icone"></i>
+                    <input type="tel" id="telefone" placeholder="Número de telefone" required>
+                </div>
+
+                <button type="submit" class="botao-login">Criar Conta</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Tela de Loading -->
+    <div class="tela-loading" id="telaLoading">
+        <div class="loading-conteudo">
+            <div class="loading-spinner"></div>
+            <p>Carregando...</p>
+        </div>
+    </div>
+
+    <script src="criarconta.js"></script>
+</body>
+
+</html>
