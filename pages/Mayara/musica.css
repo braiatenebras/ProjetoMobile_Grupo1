@@ -68,9 +68,7 @@ button.play-pause-btn:focus {
   outline: 4px solid #8a2be2;
 }
 
-.icon {
-  fill: #222;
-  width: 35px;
-  height: 35px;
+svg {
+  width: 40px;
+  height: 40px;
 }
-
