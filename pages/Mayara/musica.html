@@ -9,19 +9,19 @@
 </head>
 
 <body>
-    <body>
         <h3>Melodia</h3>
-        <button id="playPauseBtn" aria-label="Botão play/pause" title="Play/Pause">
-            <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="40" height="40">
-              <!-- Play icon by default -->
-              <polygon points="8,5 19,12 8,19" />
+        
+          <button class="play-pause-btn paused" aria-label="Botão de reprodução e pausa" title="Play/Pause">
+            <!-- Play Icon (triangle) -->
+            <svg class="icon play-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <polygon points="6,4 20,12 6,20" />
+            </svg>
+            <!-- Pause Icon (two rectangles) -->
+            <svg class="icon pause-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false" style="display:none;">
+              <rect x="6" y="4" width="4" height="16" />
+              <rect x="14" y="4" width="4" height="16" />
             </svg>
           </button>
-          <div class="bluetooth-icon" aria-label="Ícone de Bluetooth" role="img">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="40" height="40">
-              <path d="M12.03 3.97v6.6l3.99-3.99 1.42 1.42-5.41 5.41 5.41 5.41-1.42 1.42-3.99-3.99v6.6h-2v-16h2z"/>
-            </svg>
-          </div>
           <script src="js/script.js"></script>
       </body>
 

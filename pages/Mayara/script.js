@@ -11,3 +11,14 @@ function animateGradient() {
   requestAnimationFrame(animateGradient);
 }
 animateGradient();
+
+const button = document.querySelector('.play-pause-btn');
+    button.addEventListener('click', () => {
+      if (button.classList.contains('paused')) {
+        button.classList.remove('paused');
+        button.classList.add('playing');
+      } else {
+        button.classList.remove('playing');
+        button.classList.add('paused');
+      }
+    });
