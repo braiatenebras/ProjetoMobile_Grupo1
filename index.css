@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 * {
     margin: 0;
+=======
+* {    margin: 0;
+>>>>>>> 719911ef86fcedbed0f3f5c7ec2e2474563f1998
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -50,7 +54,15 @@ body {
 }
 
 .container {
+<<<<<<< HEAD
     padding: 20px;
+=======
+    display: flex;
+    min-height: 100vh;
+    padding: 20px;
+    align-items: start;
+    flex-direction: row;
+>>>>>>> 719911ef86fcedbed0f3f5c7ec2e2474563f1998
 
 }
 
@@ -65,15 +77,29 @@ body {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: transform 0.3s ease;
+<<<<<<< HEAD
+=======
+    display: flex;
+    justify-content: flex-end;
+>>>>>>> 719911ef86fcedbed0f3f5c7ec2e2474563f1998
     gap: 30px;
 
 }
 
+<<<<<<< HEAD
 .botoes {
     text-align: end;
 }
 
 /* Icones de login */
+=======
+.caixa-login:hover {
+    transform: translateY(-5px);
+}
+
+/* Icones de login */
+.pesquisar,
+>>>>>>> 719911ef86fcedbed0f3f5c7ec2e2474563f1998
 .entrar,
 .cadastro {
     color: white;
@@ -82,10 +108,20 @@ body {
     font-size: 15px;
     cursor: pointer;
     border-radius: 15px;
+<<<<<<< HEAD
     transition: 0.3s;
     padding: 15px;
 }
 
+=======
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    padding: 15px;
+}
+.pesquisar,
+>>>>>>> 719911ef86fcedbed0f3f5c7ec2e2474563f1998
 .entrar:hover,
 .cadastro:hover {
     background-color: white;
@@ -109,6 +145,7 @@ body {
     transition: opacity 0.3s ease;
 }
 
+<<<<<<< HEAD
 .informação1 {
     background-color: #f8f9fa;
     padding: 20px;
@@ -119,6 +156,44 @@ body {
     justify-content: flex-start
 }
 
+=======
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo i {
+    display: flex;
+    flex-direction: row;
+    font-size: 50px;
+    color: #6a0dad;
+    margin-bottom: 15px;
+}
+
+.logo h1 {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(to right, #9c27b0, #673ab7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.informação1 {
+    position: relative;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 600px;
+    display: flex;
+    align-items: flex-end;
+    
+
+}
+>>>>>>> 719911ef86fcedbed0f3f5c7ec2e2474563f1998
 .informação1 h2 {
     color: #343a40;
     margin-top: 0;
@@ -160,6 +235,16 @@ body {
 }
 
 @media (max-width: 480px) {
+<<<<<<< HEAD
+=======
+    .voltar-link {
+        top: 15px;
+        left: 15px;
+        font-size: 20px;
+        width: 36px;
+        height: 36px;
+    }
+>>>>>>> 719911ef86fcedbed0f3f5c7ec2e2474563f1998
 
     .caixa-login {
         padding: 30px 20px;
@@ -186,7 +271,11 @@ body {
     .cadastro {
         position: relative;
         left: 5px;
+<<<<<<< HEAD
 
     }
 
+=======
+    }
+>>>>>>> 719911ef86fcedbed0f3f5c7ec2e2474563f1998
 }
