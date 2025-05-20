@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-* {
-    margin: 0;
+* {    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -55,6 +53,7 @@ body {
     min-height: 100vh;
     padding: 20px;
     align-items: start;
+    flex-direction: row;
 
 }
 
@@ -119,18 +118,20 @@ body {
     transition: opacity 0.3s ease;
 }
 
+
 .logo {
     text-align: center;
     margin-bottom: 20px;
-    position: relative;
-    top: -30px;
-    display: flex;;
+    display: flex;
+    flex-direction: row;
 }
 
 .logo i {
+    display: flex;
+    flex-direction: row;
     font-size: 50px;
     color: #6a0dad;
-    position: relative;
+    margin-bottom: 15px;
 }
 
 .logo h1 {
@@ -146,10 +147,12 @@ body {
     position: relative;
     background-color: #f8f9fa;
     padding: 30px;
-    right: 300px;
-    margin: 30px;
     border-radius: 20px;
     max-width: 600px;
+    display: flex;
+    align-items: flex-end;
+    
+
 }
 .informação1 h2 {
     color: #343a40;
@@ -225,200 +228,5 @@ body {
     .cadastro {
         position: relative;
         left: 5px;
-
     }
-
-=======
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-    color: white;
-    min-height: 100vh;
-    overflow: hidden;
-}
-
-.fundo-musical {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.nota-musical {
-    position: absolute;
-    font-size: 24px;
-    color: rgba(255, 255, 255, 0.1);
-    animation: flutuarNota 15s linear infinite;
-    animation-delay: calc(var(--i) * -3s);
-}
-
-@keyframes flutuarNota {
-    0% {
-        transform: translateY(100vh) scale(0.5);
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 0.3;
-    }
-
-    90% {
-        opacity: 0.3;
-    }
-
-    100% {
-        transform: translateY(-10vh) scale(1.2);
-        opacity: 0;
-    }
-}
-
-.container {
-    padding: 20px;
-
-}
-
-.caixa-login {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    padding: 40px;
-    width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    height: 100%;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease;
-    gap: 30px;
-
-}
-
-.botoes {
-    text-align: end;
-}
-
-/* Icones de login */
-.entrar,
-.cadastro {
-    color: white;
-    background: transparent;
-    border: 1px solid white;
-    font-size: 15px;
-    cursor: pointer;
-    border-radius: 15px;
-    transition: 0.3s;
-    padding: 15px;
-}
-
-.entrar:hover,
-.cadastro:hover {
-    background-color: white;
-    color: black;
-}
-
-/* Tela de Loading */
-.tela-loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-}
-
-.informação1 {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 20px;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start
-}
-
-.informação1 h2 {
-    color: #343a40;
-    margin-top: 0;
-}
-
-.informação1 p {
-    color: #495057;
-    line-height: 1.6;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-/* Animações */
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    to {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-}
-
-@media (max-width: 480px) {
-
-    .caixa-login {
-        padding: 30px 20px;
-        gap: 0;
-    }
-
-    .logo h1 {
-        font-size: 28px;
-    }
-
-    .grupo-input input {
-        padding: 12px 12px 12px 40px;
-    }
-
-    .entrar,
-    .cadastro {
-
-        font-size: 8px;
-        padding: 10px;
-        position: relative;
-        left: 15px;
-    }
-
-    .cadastro {
-        position: relative;
-        left: 5px;
-
-    }
-
->>>>>>> a7c3ffc4b507f87cbc0a7089bc6c8a2ef7eb5b97
 }
