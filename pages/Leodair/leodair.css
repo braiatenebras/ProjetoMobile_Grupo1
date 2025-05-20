@@ -200,3 +200,53 @@ button:hover {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 }
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* Estilo da navbar */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #673ab7;
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Garante que o conteúdo esteja centralizado verticalmente */
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px 135deg(7, 21, 168, 0.2);
+}
+
+/* Estilo das imagens dentro da navbar */
+.navbar img {
+  width: 24px;  /* Ajuste o tamanho da imagem */
+  height: 24px; /* Ajuste a altura da imagem */
+  margin-right: 8px; /* Espaço entre a imagem e o texto */
+  vertical-align: middle; /* Alinha a imagem com o texto */
+}
+
+/* Estilo dos links dentro da navbar */
+.navbar a {
+  color: 673ab7(20, 23, 122);
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;  /* Alinha a imagem com o texto */
+  padding: 5px 10px; /* Dá espaço em volta do texto */
+  transition: background-color 0.3s ease; /* Suaviza a transição de hover */
+}
+
+/* Efeito ao passar o mouse sobre os links */
+.navbar a:hover {
+  background-color: #555;
+  border-radius: 5px;
+  color: #fff;
+}
+
