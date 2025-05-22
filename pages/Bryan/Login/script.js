@@ -105,6 +105,9 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
+
+        // FIREBASE LOGIN
+
         // login com Firebase Auth usando e-mail e senha
         firebase.auth().signInWithEmailAndPassword(email, senha)
             .then((usercredential) => {
