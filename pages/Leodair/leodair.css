@@ -106,7 +106,7 @@ button {
 }
 
 button:hover {
-  background: purple;
+  background: #800080;
   transform: translateY(-2px);
 }
 
@@ -216,7 +216,7 @@ button:hover {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #673ab7;
+  background-color: #9c27b0;
   display: flex;
   justify-content: space-around;
   align-items: center; /* Garante que o conteúdo esteja centralizado verticalmente */
@@ -245,7 +245,7 @@ button:hover {
 
 /* Efeito ao passar o mouse sobre os links */
 .navbar a:hover {
-  background-color: #555;
+  background-color: #800080;
   border-radius: 5px;
   color: #fff;
 }
