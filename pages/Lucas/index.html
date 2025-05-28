@@ -1,32 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Interface de Música</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Configurações de Música</title>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="album-art"></div>
-            <img src="logo.jpg" alt="Logo" />
-            <h2>1 (Remasterizado)</h2>
-            <p>The Beatles</p>
-        </div>
-        <ul class="menu">
-            <li><button type="button" aria-label="Like">❤️ Like</button></li>
-            <li><button type="button" aria-label="View Artist">👤 View Artist</button></li>
-            <li><button type="button" aria-label="Share">🔗 Share</button></li>
-            <li><button type="button" aria-label="Like all songs">🎵 Like all songs</button></li>
-            <li><button type="button" aria-label="Add to playlist">➡️ Add to playlist</button></li>
-            <li><button type="button" aria-label="Add to queue">📥 Add to queue</button></li>
-            <li><button type="button" aria-label="Go to radio">📻 Go to radio</button></li>
-        </ul>
-        <a href="../Mayara/musica.html">
-        <button class="close-button" type="button">Close</button>
-    </a>
-    </div>
+  <main class="container" role="main">
+    <h1>Configurações de Música</h1>
+
+    <form id="settingsForm" autocomplete="off">
+
+      <label for="audioQuality">Qualidade do Áudio</label>
+      <select id="audioQuality" name="audioQuality" aria-describedby="audioQualityDesc">
+        <option value="low">Baixa</option>
+        <option value="medium">Média</option>
+        <option value="high">Alta</option>
+      </select>
+
+      <label for="equalizerPreset">Equalizador</label>
+      <select id="equalizerPreset" name="equalizerPreset" aria-describedby="equalizerPresetDesc">
+        <option value="normal">Normal</option>
+        <option value="pop">Pop</option>
+        <option value="rock">Rock</option>
+        <option value="jazz">Jazz</option>
+        <option value="custom">Personalizado</option>
+      </select>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="backgroundPlayback" name="backgroundPlayback" />
+        <label for="backgroundPlayback" style="margin:0;">Reprodução em Segundo Plano</label>
+      </div>
+
+      <div class="checkbox-container">
+        <input type="checkbox" id="notifications" name="notifications" />
+        <label for="notifications" style="margin:0;">Ativar Notificações</label>
+      </div>
+
+      <label for="volumeControl">Volume: <span id="volumeValue">50</span>%</label>
+      <input type="range" id="volumeControl" name="volumeControl" min="0" max="100" value="50" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" />
+
+      <label for="theme">Tema</label>
+      <select id="theme" name="theme">
+        <option value="light">Claro</option>
+        <option value="dark">Escuro</option>
+        <option value="system">Padrão do aparelho</option>
+      </select>
+
+      <div class="buttons">
+        <button type="button" id="resetBtn" aria-label="Resetar configurações para padrão">Resetar</button>
+        <button type="submit" id="saveBtn" aria-label="Salvar configurações">Salvar</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="./script.js"></script>
 </body>
 </html>
 
