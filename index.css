@@ -129,6 +129,30 @@ body {
     line-height: 1.6;
 }
 
+.informação2 {
+    background-color: #f8f9fa;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.Fotos img{
+    width: 100px;
+    border-radius: 20px;
+}
+
+.informação2 h2 {
+    color: #343a40;
+    margin-top: 0;
+}
+
+.informação2 p {
+    color: #495057;
+    line-height: 1.6;
+}
 .logo {
     display: flex;
     flex-direction: row;
