@@ -5,24 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Melodia - Música</title>
     <link rel="stylesheet" href="musica.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
 
   <body>
     <div class="seta">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-      <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
-    </svg>
-  </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-arrow-left-short"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"
+        />
+      </svg>
+    </div>
 
-    <h3>Melodia</h3>
+    <div class="titulo">
+      <i class="fa-solid fa-headphones"></i>
+      <h3>Melodia</h3>
+    </div>
 
     <div class="time" id="current-time">0:00</div>
     <div class="progress" id="progress">
-        <div class="progress-bar" id="progress-bar"></div>
+      <div class="progress-bar" id="progress-bar"></div>
     </div>
     <div class="time" id="duration">0:00</div>
-</div>
-<audio id="audio" src="sua-musica.mp3"></audio>
+
+    <audio id="audio" src="sua-musica.mp3"></audio>
 
     <div class="flecha1">
       <svg
@@ -92,7 +109,6 @@
         />
       </svg>
     </div>
-    
 
     <div class="bluetooth">
       <svg
