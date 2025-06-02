@@ -7,7 +7,7 @@
 
 body {
   background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-  color: white;
+  color: rgb(255, 255, 255);
   min-height: 100vh;
 }
 
@@ -86,7 +86,7 @@ h1 {
   border-radius: 20px;
   border: none;
   background: #282828;
-  color: white;
+  color: rgb(157, 0, 255);
   transition: all 0.3s ease;
 }
 
