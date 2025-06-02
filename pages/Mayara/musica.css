@@ -39,21 +39,26 @@ body {
 .titulo {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1rem;
-  margin: 0;
-  color: white;
-  text-align: center;
-  font-size: 1rem;
-  user-select: none;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
-.titulo{
-  justify-content: space-between;
-  gap: 10px;
+.titulo i {
+  font-size: 20px;
+  color: white;
+}
+
+.titulo h3 {
+  color: white;
+  background-clip: text;
+
 }
 
 
@@ -71,7 +76,11 @@ button.play-pause-btn {
   bottom: 80px;
 }
 
-svg {
+.gear svg,.bluetooth svg {
+  width: 20px;
+  height: 20px;
+}
+svg{
   width: 40px;
   height: 40px;
 }
@@ -136,3 +145,11 @@ svg {
   color: white;
 }
 
+.gear{
+  position: fixed;
+  top: 10px;
+  right: 40px;
+  width: 10px;
+  height: 10px;
+  color: white;
+}
