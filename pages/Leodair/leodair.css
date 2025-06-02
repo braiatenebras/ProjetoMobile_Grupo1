@@ -208,8 +208,6 @@ button:hover {
   box-sizing: border-box;
 }
 
-
-
 /* Estilo da navbar */
 .navbar {
   position: fixed;
@@ -224,6 +222,7 @@ button:hover {
   box-shadow: 0 -2px 5px 135deg(7, 21, 168, 0.2);
 }
 
+
 /* Estilo das imagens dentro da navbar */
 .navbar img {
   width: 24px;  /* Ajuste o tamanho da imagem */
@@ -232,21 +231,25 @@ button:hover {
   vertical-align: middle; /* Alinha a imagem com o texto */
 }
 
+
 /* Estilo dos links dentro da navbar */
 .navbar a {
   color: 673ab7(20, 23, 122);
   text-decoration: none;
   font-size: 18px;
+  flex-direction: column;
   display: flex;
   align-items: center;  /* Alinha a imagem com o texto */
-  padding: 5px 10px; /* Dá espaço em volta do texto */
+ 
   transition: background-color 0.3s ease; /* Suaviza a transição de hover */
 }
 
+
 /* Efeito ao passar o mouse sobre os links */
 .navbar a:hover {
-  background-color: #800080;
+  background-color: #9300d6;
   border-radius: 5px;
-  color: #fff;
+  color: #ffffff;
 }
+
 
