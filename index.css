@@ -128,23 +128,30 @@ body {
     color: #495057;
     line-height: 1.6;
 }
-.logo{
+
+.logo {
     display: flex;
     flex-direction: row;
     gap: 10px;
 }
+
 .logo i {
-    font-size:40px;
+    font-size: 40px;
     color: #9c27b0;
 }
-.logo h1{
-        background: linear-gradient(to right, #9c27b0, #673ab7);
-        
+
+.logo h1 {
+    background: linear-gradient(#9c279c, #673ab7);
+    color: transparent;
+    background-clip: text;
+
 }
+
 @keyframes spin {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -173,10 +180,26 @@ body {
     .caixa-login {
         padding: 30px 20px;
         gap: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    .botoes {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        gap: 8px;
     }
 
     .logo h1 {
         font-size: 28px;
+    
+    }
+    .logo i, h1{
+        position: relative;
+        right: 80px;
     }
 
     .grupo-input input {
@@ -184,15 +207,14 @@ body {
     }
 
     .entrar,
-    .cadastro {
+    .cadastro,
+    .pesquisar {
         font-size: 8px;
         padding: 10px;
         position: relative;
         left: 15px;
-    }
-
-    .cadastro {
         position: relative;
         left: 5px;
+        
     }
-}
+    
