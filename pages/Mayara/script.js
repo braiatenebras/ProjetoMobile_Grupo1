@@ -1,3 +1,4 @@
+// Fundo degradê
 const body = document.body;
 let angle = 270;
 let direction = 1;
@@ -5,12 +6,13 @@ function animateGradient() {
   angle += direction * 0.1;
   if(angle > 450) direction = -1;
   else if(angle < 270) direction = 1;
-  body.style.background = `linear-gradient(${angle}deg, #0f3460, #4B0082, #0f3460, #4B0082)`;
+  body.style.background = `linear-gradient(${angle}deg, #0f3460, #673ab7, #0f3460, #673ab7)`;
   body.style.backgroundSize = '800% 800%';
   requestAnimationFrame(animateGradient);
 }
 animateGradient();
 
+// Botão de play
 const playPauseButton = document.querySelector('.play-pause-btn');
        
 const audio = document.getElementById('audio');
@@ -61,3 +63,37 @@ const audio = document.getElementById('audio');
             const secs = Math.floor(seconds % 60);
             return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
         }
+
+
+
+        //Bt
+        const btBtn = document.getElementById('btBtn');
+    const statusDiv = document.getElementById('status');
+    function logStatus(message) {
+      statusDiv.textContent = message;
+    }
+    async function requestBluetoothDevice() {
+      if (!navigator.bluetooth) {
+        logStatus('Bluetooth não suportado neste navegador.');
+        return;
+      }
+      try {
+        logStatus('Procurando dispositivos Bluetooth...');
+        const device = await navigator.bluetooth.requestDevice({
+          // Accept all devices. You can customize filters below as needed.
+          acceptAllDevices: true,
+          optionalServices: []
+        });
+        logStatus(`Conectado ao dispositivo: ${device.name || 'Nome desconhecido'}`);
+        // Você pode expandir aqui para conectar GATT server e interagir com serviços
+      } catch (error) {
+        if(error.name === 'NotFoundError'){
+          logStatus('Nenhum dispositivo selecionado.');
+        } else {
+          logStatus('Erro: ' + error.message);
+        }
+      }
+    }
+    btBtn.addEventListener('click', () => {
+      requestBluetoothDevice();
+    });
