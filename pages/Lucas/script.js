@@ -75,9 +75,8 @@
       saveSettings(defaultSettings);
       alert('Configurações resetadas para padrão.');
     });
-
-    // Inicializa o formulário com as configurações salvas ou padrão ao carregar a página
-    document.addEventListener('DOMContentLoaded', () => {
-      const settings = loadSettings();
-      fillForm(settings);
-    });
+      
+    function navigate(event) {
+      event.preventDefault();
+      window.location.href = "../Mayara/musica.html";
+    }
