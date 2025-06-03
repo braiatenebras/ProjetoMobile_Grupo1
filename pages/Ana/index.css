@@ -3,6 +3,7 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 body {
     background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
     color: white;
@@ -13,7 +14,7 @@ body {
 }
 
 .container {
-    flex: 1; 
+    flex: 1;
     padding: 20px;
 }
 
@@ -39,12 +40,15 @@ body {
         transform: translateY(100vh) scale(0.5);
         opacity: 0;
     }
+
     10% {
         opacity: 0.3;
     }
+
     90% {
         opacity: 0.3;
     }
+
     100% {
         transform: translateY(-10vh) scale(1.2);
         opacity: 0;
@@ -86,7 +90,8 @@ body {
 }
 
 .entrar:hover,
-.cadastro:hover {
+.cadastro:hover,
+.pesquisar:hover {
     background-color: white;
     color: black;
 }
@@ -138,9 +143,37 @@ body {
     justify-content: flex-start;
 }
 
-.Fotos img {
-    width: 100px;
+.Fotos {
+    background-color: #f8f9fa;
+    margin-top: 15px;
+    padding: 20px;
     border-radius: 20px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: right;
+}
+
+h4 {
+    color: #000000;
+}
+
+h3 {
+    margin: 15px;
+    margin-bottom: 12px;
+    text-align: left;
+    color: #343a40;
+    margin-top: 0;
+}
+
+h3:hover {
+
+}
+
+.imagem {
+    width: 100px;
+    border-radius: 80px;
 }
 
 .informação2 h2 {
@@ -184,6 +217,7 @@ footer {
         align-items: center;
         flex-direction: column;
     }
+
     .botoes {
         display: flex;
         justify-content: center;
@@ -196,7 +230,8 @@ footer {
         font-size: 28px;
     }
 
-    .logo i, h1 {
+    .logo i,
+    h1 {
         position: relative;
         right: 80px;
     }
