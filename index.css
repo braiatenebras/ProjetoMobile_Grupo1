@@ -142,17 +142,15 @@ body {
     flex-direction: column;
     justify-content: flex-start;
 }
-
-.Fotos {
-    background-color: #f8f9fa;
-    margin-top: 15px;
-    padding: 20px;
+.carousel-inner{
     border-radius: 20px;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: right;
+    margin-top: 15px;
+    
+}
+.carousel{
+    width: 50%;
+   width: 180px;
+
 }
 
 h4 {
