@@ -146,6 +146,9 @@ svg{
   color: white;
 }
 
+a{
+  color: white;
+}
 .gear{
   position: fixed;
   top: 17px;

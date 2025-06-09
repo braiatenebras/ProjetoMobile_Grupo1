@@ -63,37 +63,20 @@ const audio = document.getElementById('audio');
             const secs = Math.floor(seconds % 60);
             return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
         }
+        
 
 
-
-        //Bt
-        const btBtn = document.getElementById('btBtn');
-    const statusDiv = document.getElementById('status');
-    function logStatus(message) {
-      statusDiv.textContent = message;
-    }
-    async function requestBluetoothDevice() {
-      if (!navigator.bluetooth) {
-        logStatus('Bluetooth não suportado neste navegador.');
-        return;
-      }
-      try {
-        logStatus('Procurando dispositivos Bluetooth...');
-        const device = await navigator.bluetooth.requestDevice({
-          // Accept all devices. You can customize filters below as needed.
-          acceptAllDevices: true,
-          optionalServices: []
+        document.getElementById('bluetoothButton').addEventListener('click', function() {
+            // Verifica se a API Web Bluetooth é suportada
+            if (navigator.bluetooth) {
+                navigator.bluetooth.requestDevice({ acceptAllDevices: true })
+                    .then(device => {
+                        console.log('Dispositivo Bluetooth conectado:', device);
+                    })
+                    .catch(error => {
+                        console.error('Erro ao conectar ao dispositivo Bluetooth:', error);
+                    });
+            } else {
+                console.error('API Web Bluetooth não é suportada neste navegador.');
+            }
         });
-        logStatus(`Conectado ao dispositivo: ${device.name || 'Nome desconhecido'}`);
-        // Você pode expandir aqui para conectar GATT server e interagir com serviços
-      } catch (error) {
-        if(error.name === 'NotFoundError'){
-          logStatus('Nenhum dispositivo selecionado.');
-        } else {
-          logStatus('Erro: ' + error.message);
-        }
-      }
-    }
-    btBtn.addEventListener('click', () => {
-      requestBluetoothDevice();
-    });
