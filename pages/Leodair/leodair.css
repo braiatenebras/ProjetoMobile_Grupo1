@@ -86,7 +86,7 @@ h1 {
   border-radius: 20px;
   border: none;
   background: #282828;
-  color: rgb(157, 0, 255);
+  color: rgb(255, 255, 255);
   transition: all 0.3s ease;
 }
 
@@ -100,7 +100,7 @@ button {
   border-radius: 20px;
   border: none;
   background: #9c27b0;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -234,7 +234,7 @@ button:hover {
 
 /* Estilo dos links dentro da navbar */
 .navbar a {
-  color: 673ab7(20, 23, 122);
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
   flex-direction: column;
@@ -247,7 +247,7 @@ button:hover {
 
 /* Efeito ao passar o mouse sobre os links */
 .navbar a:hover {
-  background-color: #9300d6;
+  background-color: #9c27b0;
   border-radius: 5px;
   color: #ffffff;
 }
