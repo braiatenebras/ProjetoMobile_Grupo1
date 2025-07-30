@@ -129,14 +129,16 @@
             <section class="popular-artists">
                 <h2>Mais Ouvidas</h2>
                 <div class="artists-grid">
-                    <div class="artist-card">
+
+                    <div class="artist-card" data-id="alittlepieceofheaven">
                         <div class="artist-image">
                             <img src="assets/a7x.png" alt="Artista">
                         </div>
                         <h3>A Little Piece of Heaven</h3>
                         <p>Avenged Sevenfold</p>
                     </div>
-                    <div class="artist-card">
+
+                    <div class="artist-card" data-id="deadmemories">
                         <div class="artist-image">
                             <img src="assets/slipknot.png" alt="Artista">
                         </div>
@@ -144,15 +146,15 @@
                         <p>Slipknot</p>
                     </div>
 
-                    <div class="artist-card">
+                    <div class="artist-card" data-id="tilwedie">
                         <div class="artist-image">
-                            <img src="assets/starset.png" alt="Artista">
+                            <img src="assets/slipknot.png" alt="Artista">
                         </div>
-                        <h3>It Has Begun</h3>
-                        <p>Starset</p>
+                        <h3>Til We Die</h3>
+                        <p>Slipknot</p>
                     </div>
 
-                    <div class="artist-card">
+                    <div class="artist-card" data-id="nasuaestante">
                         <div class="artist-image">
                             <img src="assets/pitty.png" alt="Artista">
                         </div>
@@ -160,8 +162,30 @@
                         <p>Pitty</p>
                     </div>
 
+                    <div class="artist-card" data-id="intheend">
+                        <div class="artist-image">
+                            <img src="assets/linkinpark.png" alt="Artista">
+                        </div>
+                        <h3>In the End</h3>
+                        <p>Linkin Park</p>
+                    </div>
 
-                </div>
+                    <div class="artist-card" data-id="monster">
+                        <div class="artist-image">
+                            <img src="assets/starset.png" alt="Artista">
+                        </div>
+                        <h3>Monster</h3>
+                        <p>Starset</p>
+                    </div>
+
+                    <div class="artist-card" data-id="herewithme">
+                        <div class="artist-image">
+                            <img src="assets/d4vd.png" alt="Artista">
+                        </div>
+                        <h3>Here With Me</h3>
+                        <p>d4vd</p>
+                    </div>
+
             </section>
 
             <!-- Seção de Artistas em destaque -->
@@ -210,41 +234,42 @@
         </main>
     </div>
 
-    <!-- Player de música -->
+    <!-- Player de música  -->
     <div class="music-player">
         <div class="player-left">
             <div class="song-info">
-                <img src="assets/a7x.png" alt="Capa do Álbum">
+                <img id="current-album-cover" src="assets/a7x.png" alt="Capa do Álbum">
                 <div class="song-details">
-                    <h4>A Little Piece of Heaven</h4>
-                    <p>Avenged Sevenfold</p>
+                    <h4 id="current-song-title">Não está tocando nada</h4>
+                    <p id="current-song-artist">Escolha uma música ai</p>
                 </div>
                 <button class="like-button"><i class="far fa-heart"></i></button>
             </div>
         </div>
         <div class="player-center">
             <div class="player-controls">
-                <button><i class="fas fa-random"></i></button>
-                <button><i class="fas fa-step-backward"></i></button>
-                <button class="play-pause"><i class="fas fa-pause"></i></button>
-                <button><i class="fas fa-step-forward"></i></button>
-                <button><i class="fas fa-redo"></i></button>
+                <button id="shuffle-btn"><i class="fas fa-random"></i></button>
+                <button id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                <button id="play-pause-btn" class="play-pause"><i class="fas fa-pause"></i></button>
+                <button id="next-btn"><i class="fas fa-step-forward"></i></button>
+                <button id="repeat-btn"><i class="fas fa-redo"></i></button>
             </div>
             <div class="progress-bar">
-                <span>0:00</span>
+                <span id="current-time">0:00</span>
                 <div class="progress-track">
-                    <div class="progress-fill"></div>
+                    <div id="progress-fill" class="progress-fill"></div>
                 </div>
-                <span>3:45</span>
+                <span id="duration">3:45</span>
             </div>
         </div>
         <div class="player-right">
-            <button><i class="fas fa-list"></i></button>
-            <button><i class="fas fa-volume-up"></i></button>
+            <button id="playlist-btn"><i class="fas fa-list"></i></button>
+            <button id="mute-btn"><i class="fas fa-volume-up"></i></button>
             <div class="volume-slider">
-                <input type="range" min="0" max="100" value="80">
+                <input id="volume-control" type="range" min="0" max="100" value="80">
             </div>
         </div>
+        <audio id="audio-player"></audio>
     </div>
 
     <!-- Notas musicais flutuantes no fundo -->

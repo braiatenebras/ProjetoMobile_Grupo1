@@ -1,0 +1,64 @@
+{
+    "musicLibrary": [
+        {
+            "id": "alittlepieceofheaven",
+            "title": "A Little Piece of Heaven",
+            "artist": "Avenged Sevenfold",
+            "cover": "assets/a7x.png",
+            "file": "songs/alittlepieceofheaven.mp3"
+        },
+        {
+            "id": "deadmemories",
+            "title": "Dead Memories",
+            "artist": "Slipknot",
+            "cover": "assets/slipknot.png",
+            "file": "songs/deadmemories.mp3"
+        },
+        {
+            "id": "tilwedie",
+            "title": "Til We Die",
+            "artist": "Slipknot",
+            "cover": "assets/slipknot.png",
+            "file": "songs/tilwedie.mp3"
+        },
+        {
+            "id": "nasuaestante",
+            "title": "Na Sua Estante",
+            "artist": "Pitty",
+            "cover": "assets/pitty.png",
+            "file": "songs/nasuaestante.mp3"
+        },
+        {
+            "id": "intheend",
+            "title": "In the End",
+            "artist": "Linkin Park",
+            "cover": "assets/linkinpark.png",
+            "file": "songs/intheend.mp3",
+            "keywords": [
+                "Linkin Park",
+                "in the end"
+            ]
+        },
+        {
+            "id": "herewithme",
+            "title": "Here With Me",
+            "artist": "d4vd",
+            "cover": "assets/d4vd.png",
+            "file": "songs/herewithme.mp3"
+        },
+        {
+            "id": "chopsuey",
+            "title": "Chop Suey!",
+            "artist": "System of a Down",
+            "cover": "assets/thisissoad.png",
+            "file": "songs/chopsuey.mp3"
+        },
+        {
+            "id": "monster",
+            "title": "Monster",
+            "artist": "Starset",
+            "cover": "assets/starset.png",
+            "file": "songs/monster.mp3"
+        }
+    ]
+}
