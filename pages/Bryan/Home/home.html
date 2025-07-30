@@ -21,9 +21,10 @@
         </div>
         <div class="navbar-center">
             <div class="search-bar">
-                <input type="text" placeholder="Pesquisar músicas, artistas, álbuns">
-                <button><i class="fas fa-search"></i></button>
+                <input type="text" id="search-input" placeholder="Pesquise sua música aqui...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
             </div>
+            <div id="search-results" class="search-results"></div>
         </div>
         <div class="navbar-right">
             <a href="#" class="user-profile">
@@ -238,7 +239,7 @@
     <div class="music-player">
         <div class="player-left">
             <div class="song-info">
-                <img id="current-album-cover" src="assets/a7x.png" alt="Capa do Álbum">
+                <img id="current-album-cover" src="assets/nothing.png" alt="Capa do Álbum">
                 <div class="song-details">
                     <h4 id="current-song-title">Não está tocando nada</h4>
                     <p id="current-song-artist">Escolha uma música ai</p>

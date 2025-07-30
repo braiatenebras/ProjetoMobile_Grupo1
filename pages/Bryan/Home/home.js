@@ -9,15 +9,29 @@ document.addEventListener('DOMContentLoaded', async function () {
     const currentSongTitle = document.getElementById('current-song-title');
     const currentSongArtist = document.getElementById('current-song-artist');
     const currentAlbumCover = document.getElementById('current-album-cover');
+    const searchInput = document.getElementById('search-input');
+    const searchBtn = document.getElementById('search-btn');
+    const searchResults = document.getElementById('search-results');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const shuffleBtn = document.getElementById('shuffle-btn');
+    const repeatBtn = document.getElementById('repeat-btn');
 
     let songsMap = {};
+    let songIds = []; // Array para manter a ordem das músicas
+    let currentSongIndex = -1;
+    let isShuffleOn = false;
+    let isRepeatOn = false;
+    let originalSongOrder = []; // Para guardar a ordem original quando shuffle estiver ativo
 
     try {
         const response = await fetch('songs.json');
         const data = await response.json();
         data.musicLibrary.forEach(song => {
             songsMap[song.id] = song;
+            songIds.push(song.id);
         });
+        originalSongOrder = [...songIds]; // Salva a ordem original
     } catch (error) {
         console.error("Erro ao carregar songs.json:", error);
         alert("Erro ao carregar a biblioteca de músicas.");
@@ -52,6 +66,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         if (!song) return;
 
         currentSong = song;
+        currentSongIndex = songIds.indexOf(songId);
         audioPlayer.src = song.file;
         currentSongTitle.textContent = song.title;
         currentSongArtist.textContent = song.artist;
@@ -64,6 +79,131 @@ document.addEventListener('DOMContentLoaded', async function () {
             });
     }
 
+    function playNextSong() {
+        if (songIds.length === 0) return;
+
+        let nextIndex = currentSongIndex + 1;
+
+        if (nextIndex >= songIds.length) {
+            if (isRepeatOn) {
+                nextIndex = 0;
+            } else {
+                // Fim da lista e repeat desligado
+                isPlaying = false;
+                playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+                return;
+            }
+        }
+
+        loadAndPlaySong(songIds[nextIndex]);
+    }
+
+    function playPrevSong() {
+        if (songIds.length === 0) return;
+
+        let prevIndex = currentSongIndex - 1;
+
+        if (prevIndex < 0) {
+            if (isRepeatOn) {
+                prevIndex = songIds.length - 1;
+            } else {
+                // Início da lista e repeat desligado
+                prevIndex = 0;
+            }
+        }
+
+        loadAndPlaySong(songIds[prevIndex]);
+    }
+
+    function toggleShuffle() {
+        isShuffleOn = !isShuffleOn;
+
+        if (isShuffleOn) {
+            // Ativa o shuffle - embaralha a lista
+            shuffleBtn.classList.add('active');
+            const currentSongId = songIds[currentSongIndex];
+
+            // Embaralha o array, mantendo a música atual como primeira
+            let tempArray = [...songIds];
+            tempArray.splice(currentSongIndex, 1); // Remove a música atual
+            tempArray = shuffleArray(tempArray);
+            tempArray.unshift(currentSongId); // Adiciona a música atual no início
+
+            songIds = tempArray;
+            currentSongIndex = 0;
+        } else {
+            // Desativa o shuffle - volta para a ordem original
+            shuffleBtn.classList.remove('active');
+            const currentSongId = songIds[currentSongIndex];
+            songIds = [...originalSongOrder];
+            currentSongIndex = songIds.indexOf(currentSongId);
+        }
+    }
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    function toggleRepeat() {
+        isRepeatOn = !isRepeatOn;
+        repeatBtn.classList.toggle('active', isRepeatOn);
+    }
+
+    // Função de busca
+    function searchSongs(query) {
+        query = query.toLowerCase().trim();
+        if (!query) {
+            searchResults.innerHTML = '';
+            searchResults.style.display = 'none';
+            return;
+        }
+
+        const results = [];
+        for (const songId in songsMap) {
+            const song = songsMap[songId];
+            if (song.title.toLowerCase().includes(query) ||
+                song.artist.toLowerCase().includes(query)) {
+                results.push(song);
+            }
+        }
+
+        displaySearchResults(results);
+    }
+
+    function displaySearchResults(results) {
+        searchResults.innerHTML = '';
+
+        if (results.length === 0) {
+            searchResults.innerHTML = '<div class="search-result-item">Nenhum resultado encontrado</div>';
+            searchResults.style.display = 'block';
+            return;
+        }
+
+        results.forEach(song => {
+            const resultItem = document.createElement('div');
+            resultItem.className = 'search-result-item';
+            resultItem.innerHTML = `
+                <img src="${song.cover}" alt="${song.title}">
+                <div class="search-result-info">
+                    <h4>${song.title}</h4>
+                    <p>${song.artist}</p>
+                </div>
+            `;
+            resultItem.addEventListener('click', () => {
+                loadAndPlaySong(song.id);
+                searchResults.style.display = 'none';
+                searchInput.value = '';
+            });
+            searchResults.appendChild(resultItem);
+        });
+
+        searchResults.style.display = 'block';
+    }
+
     // event listeners nos elementos que têm data-id
     document.querySelectorAll('[data-id]').forEach(element => {
         element.addEventListener('click', function () {
@@ -74,28 +214,47 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
     });
 
+    // event listeners para busca
+    searchInput.addEventListener('input', () => searchSongs(searchInput.value));
+    searchBtn.addEventListener('click', () => searchSongs(searchInput.value));
+
+    // fechar resultados ao clicar fora
+    document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+            searchResults.style.display = 'none';
+        }
+    });
+
     // controles do player
     playPauseBtn.addEventListener('click', function () {
         if (isPlaying) {
             audioPlayer.pause();
             this.innerHTML = '<i class="fas fa-play"></i>';
         } else {
-            audioPlayer.play()
-                .then(() => {
-                    this.innerHTML = '<i class="fas fa-pause"></i>';
-                })
-                .catch(error => {
-                    console.error("Erro ao reproduzir:", error);
-                    alert("Selecione uma música para reproduzir primeiro.");
-                });
+            if (currentSong) {
+                audioPlayer.play()
+                    .then(() => {
+                        this.innerHTML = '<i class="fas fa-pause"></i>';
+                    });
+            } else if (songIds.length > 0) {
+                loadAndPlaySong(songIds[0]);
+            }
         }
         isPlaying = !isPlaying;
     });
 
+    prevBtn.addEventListener('click', playPrevSong);
+    nextBtn.addEventListener('click', playNextSong);
+    shuffleBtn.addEventListener('click', toggleShuffle);
+    repeatBtn.addEventListener('click', toggleRepeat);
+
     audioPlayer.addEventListener('timeupdate', updateProgress);
     audioPlayer.addEventListener('ended', function () {
-        isPlaying = false;
-        playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
+        if (isRepeatOn && currentSongIndex !== -1) {
+            loadAndPlaySong(songIds[currentSongIndex]);
+        } else {
+            playNextSong();
+        }
     });
 
     volumeControl.addEventListener('input', function () {
