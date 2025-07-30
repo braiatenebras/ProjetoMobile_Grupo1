@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', async function () {
     const repeatBtn = document.getElementById('repeat-btn');
 
     let songsMap = {};
-    let songIds = []; // Array para manter a ordem das músicas
+    let songIds = [];
     let currentSongIndex = -1;
     let isShuffleOn = false;
     let isRepeatOn = false;
-    let originalSongOrder = []; // Para guardar a ordem original quando shuffle estiver ativo
+    let originalSongOrder = [];
 
     try {
         const response = await fetch('songs.json');
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             songsMap[song.id] = song;
             songIds.push(song.id);
         });
-        originalSongOrder = [...songIds]; // Salva a ordem original
+        originalSongOrder = [...songIds]; // salva a ordem original
     } catch (error) {
         console.error("Erro ao carregar songs.json:", error);
         alert("Erro ao carregar a biblioteca de músicas.");
@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', async function () {
     let currentSong = null;
     let isPlaying = false;
 
-    // funções auxiliares
     function formatTime(seconds) {
         const minutes = Math.floor(seconds / 60);
         const secs = Math.floor(seconds % 60);
@@ -88,7 +87,6 @@ document.addEventListener('DOMContentLoaded', async function () {
             if (isRepeatOn) {
                 nextIndex = 0;
             } else {
-                // Fim da lista e repeat desligado
                 isPlaying = false;
                 playPauseBtn.innerHTML = '<i class="fas fa-play"></i>';
                 return;
@@ -107,7 +105,6 @@ document.addEventListener('DOMContentLoaded', async function () {
             if (isRepeatOn) {
                 prevIndex = songIds.length - 1;
             } else {
-                // Início da lista e repeat desligado
                 prevIndex = 0;
             }
         }
@@ -119,20 +116,19 @@ document.addEventListener('DOMContentLoaded', async function () {
         isShuffleOn = !isShuffleOn;
 
         if (isShuffleOn) {
-            // Ativa o shuffle - embaralha a lista
+            // ativa o shuffle
             shuffleBtn.classList.add('active');
             const currentSongId = songIds[currentSongIndex];
 
-            // Embaralha o array, mantendo a música atual como primeira
             let tempArray = [...songIds];
-            tempArray.splice(currentSongIndex, 1); // Remove a música atual
+            tempArray.splice(currentSongIndex, 1);
             tempArray = shuffleArray(tempArray);
-            tempArray.unshift(currentSongId); // Adiciona a música atual no início
+            tempArray.unshift(currentSongId);
 
             songIds = tempArray;
             currentSongIndex = 0;
         } else {
-            // Desativa o shuffle - volta para a ordem original
+            // desativa o shuffle - volta para a ordem original
             shuffleBtn.classList.remove('active');
             const currentSongId = songIds[currentSongIndex];
             songIds = [...originalSongOrder];
