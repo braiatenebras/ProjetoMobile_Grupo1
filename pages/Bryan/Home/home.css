@@ -562,7 +562,8 @@ body {
 @media (max-width: 1200px) {
 
 
-    .playlist-grid, .featured-grid,
+    .playlist-grid,
+    .featured-grid,
     .artists-grid {
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     }
