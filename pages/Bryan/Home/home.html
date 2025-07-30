@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodia - Início</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+    <!-- Barra de navegação superior -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="#" class="logo">
+                <i class="fas fa-headphones"></i>
+                <span>Melodia</span>
+            </a>
+        </div>
+        <div class="navbar-center">
+            <div class="search-bar">
+                <input type="text" placeholder="Pesquisar músicas, artistas, álbuns">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <a href="#" class="user-profile">
+                <i class="fa-solid fa-circle-user" alt="Perfil"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <div class="main-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-menu">
+                <a href="#inicio" class="active"><i class="fas fa-home"></i> Início</a>
+                <a href="#"><i class="fas fa-compass"></i> Explorar</a>
+                <a href="#"><i class="fas fa-music"></i> Biblioteca</a>
+                <a href="#"><i class="fas fa-heart"></i> Favoritos</a>
+            </div>
+
+            <div class="playlists">
+                <h3>SUAS PLAYLISTS</h3>
+                <a href="#"><i class="fas fa-plus-circle"></i> Nova playlist</a>
+                <a href="#"><i class="fas fa-music"></i> Mix do dia</a>
+                <a href="#"><i class="fas fa-music"></i> Relaxar</a>
+                <a href="#"><i class="fas fa-music"></i> Treino</a>
+                <a href="#"><i class="fas fa-music"></i> Foco</a>
+            </div>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main id="inicio" class="content">
+            <section class="featured">
+                <h2>Boa tarde</h2>
+                <div class="featured-grid">
+                    <div class="featured-card" style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);">
+                        <div class="card-content">
+                            <h3>Mix do dia</h3>
+                            <p>Seu mix diário com músicas que você ama</p>
+                        </div>
+                    </div>
+                    <div class="featured-card" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                        <div class="card-content">
+                            <h3>Relaxar</h3>
+                            <p>Músicas calmas para seu momento</p>
+                        </div>
+                    </div>
+                    <div class="featured-card" style="background: linear-gradient(135deg, #f12711 0%, #f5af19 100%);">
+                        <div class="card-content">
+                            <h3>Energia</h3>
+                            <p>Para manter o pique</p>
+                        </div>
+                    </div>
+                    <div class="featured-card"
+                        style="background: linear-gradient(135deg, #12c2e9 0%, #c471ed 50%, #f64f59 100%);">
+                        <div class="card-content">
+                            <h3>Academia</h3>
+                            <p>Para treinar naquele pique</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de playlists recomendadas -->
+            <section class="recommended">
+                <h2>Feito para você</h2>
+                <div class="playlist-grid">
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="assets/thisisslipknot.png" alt="Playlist">
+                            <button class="play-button"><i class="fas fa-play"></i></button>
+                        </div>
+                        <h3>This is Slipknot</h3>
+                        <p>Com base no seu histórico</p>
+                    </div>
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="assets/thisisa7x.png" alt="Playlist">
+                            <button class="play-button"><i class="fas fa-play"></i></button>
+                        </div>
+                        <h3>This is Avenged Sevenfold</h3>
+                        <p>Com base no seu histórico</p>
+                    </div>
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="assets/thisisd4vd.png" alt="Playlist">
+                            <button class="play-button"><i class="fas fa-play"></i></button>
+                        </div>
+                        <h3>This is d4vd </h3>
+                        <p>Com base no seu histórico</p>
+                    </div>
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="assets/thisissoad.png" alt="Playlist">
+                            <button class="play-button"><i class="fas fa-play"></i></button>
+                        </div>
+                        <h3>This is System of a Down</h3>
+                        <p>Com base no seu histórico</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de artistas populares -->
+            <section class="popular-artists">
+                <h2>Mais Ouvidas</h2>
+                <div class="artists-grid">
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="assets/a7x.png" alt="Artista">
+                        </div>
+                        <h3>A Little Piece of Heaven</h3>
+                        <p>Avenged Sevenfold</p>
+                    </div>
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="assets/slipknot.png" alt="Artista">
+                        </div>
+                        <h3>Dead Memories</h3>
+                        <p>Slipknot</p>
+                    </div>
+
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="assets/starset.png" alt="Artista">
+                        </div>
+                        <h3>It Has Begun</h3>
+                        <p>Starset</p>
+                    </div>
+
+                    <div class="artist-card">
+                        <div class="artist-image">
+                            <img src="assets/pitty.png" alt="Artista">
+                        </div>
+                        <h3>Na Sua Estante</h3>
+                        <p>Pitty</p>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <!-- Seção de Artistas em destaque -->
+            <section class="featured-playlists">
+                <h2>Artistas em Destaque</h2>
+                <div class="playlist-grid">
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="assets/a7x.png" alt="Playlist">
+                            <button class="play-button"><i class="fas fa-play"></i></button>
+                        </div>
+                        <h3>Avenged Sevenfold</h3>
+                        <p>Os maiores sucessos do Avenged Sevenfold</p>
+                    </div>
+
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="assets/slipknot.png" alt="Playlist">
+                            <button class="play-button"><i class="fas fa-play"></i></button>
+                        </div>
+                        <h3>Slipknot</h3>
+                        <p>Os maiores sucessos do Slipknot</p>
+                    </div>
+
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="assets/pitty.png" alt="Playlist">
+                            <button class="play-button"><i class="fas fa-play"></i></button>
+                        </div>
+                        <h3>Pitty</h3>
+                        <p>Os maiores sucessos da Pitty</p>
+                    </div>
+
+                    <div class="playlist-card">
+                        <div class="playlist-image">
+                            <img src="assets/linkinpark.png" alt="Playlist">
+                            <button class="play-button"><i class="fas fa-play"></i></button>
+                        </div>
+                        <h3>Linkin Park</h3>
+                        <p>Os maiores sucessos do Linkin Park</p>
+                    </div>
+
+
+                </div>
+
+        </main>
+    </div>
+
+    <!-- Player de música -->
+    <div class="music-player">
+        <div class="player-left">
+            <div class="song-info">
+                <img src="assets/a7x.png" alt="Capa do Álbum">
+                <div class="song-details">
+                    <h4>A Little Piece of Heaven</h4>
+                    <p>Avenged Sevenfold</p>
+                </div>
+                <button class="like-button"><i class="far fa-heart"></i></button>
+            </div>
+        </div>
+        <div class="player-center">
+            <div class="player-controls">
+                <button><i class="fas fa-random"></i></button>
+                <button><i class="fas fa-step-backward"></i></button>
+                <button class="play-pause"><i class="fas fa-pause"></i></button>
+                <button><i class="fas fa-step-forward"></i></button>
+                <button><i class="fas fa-redo"></i></button>
+            </div>
+            <div class="progress-bar">
+                <span>0:00</span>
+                <div class="progress-track">
+                    <div class="progress-fill"></div>
+                </div>
+                <span>3:45</span>
+            </div>
+        </div>
+        <div class="player-right">
+            <button><i class="fas fa-list"></i></button>
+            <button><i class="fas fa-volume-up"></i></button>
+            <div class="volume-slider">
+                <input type="range" min="0" max="100" value="80">
+            </div>
+        </div>
+    </div>
+
+    <!-- Notas musicais flutuantes no fundo -->
+    <div class="fundo-musical">
+        <div class="nota-musical" style="--i:1"><i class="fas fa-music"></i></div>
+        <div class="nota-musical" style="--i:2"><i class="fas fa-music"></i></div>
+        <div class="nota-musical" style="--i:3"><i class="fas fa-music"></i></div>
+        <div class="nota-musical" style="--i:4"><i class="fas fa-music"></i></div>
+        <div class="nota-musical" style="--i:5"><i class="fas fa-music"></i></div>
+    </div>
+
+    <script src="home.js"></script>
+
+
+
+</body>
+
+</html>

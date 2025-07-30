@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     document.body.removeChild(mensagem);
                 }
                 // levar para outra tela
-                window.location.href = '../../../index.html';
+                window.location.href = '../Home/home.html';
             }, 500);
         }, 3000);
     }
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (document.body.contains(mensagem)) {
                     document.body.removeChild(mensagem);
                 }
-                window.location.href = '../../../index.html';
+                window.location.href = '../Home/home.html';
             }, 500);
         }, 1000);
     }
