@@ -1,13 +1,47 @@
 {
     "musicLibrary": [
         {
+            "_comment": "AVENGED SEVENFOLD",
             "id": "alittlepieceofheaven",
             "title": "A Little Piece of Heaven",
             "artist": "Avenged Sevenfold",
-            "cover": "assets/a7x.png",
+            "cover": "assets/a7x2.png",
             "file": "songs/alittlepieceofheaven.mp3"
         },
         {
+            "_comment": "AVENGED SEVENFOLD",
+            "id": "sofaraway",
+            "title": "So Far Away",
+            "artist": "Avenged Sevenfold",
+            "cover": "assets/a7x.png",
+            "file": "songs/sofaraway.mp3"
+        },
+        {
+            "_comment": "AVENGED SEVENFOLD",
+            "id": "saveme",
+            "title": "Save Me",
+            "artist": "Avenged Sevenfold",
+            "cover": "assets/a7x.png",
+            "file": "songs/saveme.mp3"
+        },
+        {
+            "_comment": "AVENGED SEVENFOLD",
+            "id": "buriedalive",
+            "title": "Buried Alive",
+            "artist": "Avenged Sevenfold",
+            "cover": "assets/a7x.png",
+            "file": "songs/buriedalive.mp3"
+        },
+        {
+            "_comment": "SLIPKNOT",
+            "id": "duality",
+            "title": "Duality",
+            "artist": "Slipknot",
+            "cover": "assets/slipknot2.png",
+            "file": "songs/duality.mp3"
+        },
+        {
+            "_comment": "SLIPKNOT",
             "id": "deadmemories",
             "title": "Dead Memories",
             "artist": "Slipknot",
@@ -22,6 +56,7 @@
             "file": "songs/tilwedie.mp3"
         },
         {
+            "_comment": "PITTY",
             "id": "nasuaestante",
             "title": "Na Sua Estante",
             "artist": "Pitty",
@@ -29,6 +64,7 @@
             "file": "songs/nasuaestante.mp3"
         },
         {
+            "_comment": "LINKIN PARK",
             "id": "intheend",
             "title": "In the End",
             "artist": "Linkin Park",
@@ -36,6 +72,7 @@
             "file": "songs/intheend.mp3"
         },
         {
+            "_comment": "D4VD",
             "id": "herewithme",
             "title": "Here With Me",
             "artist": "d4vd",
@@ -43,6 +80,23 @@
             "file": "songs/herewithme.mp3"
         },
         {
+            "_comment": "D4VD",
+            "id": "romantichomicide",
+            "title": "Romantic Homicide",
+            "artist": "d4vd",
+            "cover": "assets/d4vd.png",
+            "file": "songs/romantichomicide.mp3"
+        },
+        {
+            "_comment": "D4VD",
+            "id": "youandi",
+            "title": "You and I",
+            "artist": "d4vd",
+            "cover": "assets/d4vd.png",
+            "file": "songs/youandi.mp3"
+        },
+        {
+            "_comment": "SYSTEM OF A DOWN",
             "id": "chopsuey",
             "title": "Chop Suey!",
             "artist": "System of a Down",
@@ -50,6 +104,21 @@
             "file": "songs/chopsuey.mp3"
         },
         {
+            "id": "toxicity",
+            "title": "Toxicity",
+            "artist": "System of a Down",
+            "cover": "assets/soad.png",
+            "file": "songs/toxicity.mp3"
+        },
+        {
+            "id": "aerials",
+            "title": "Aerials",
+            "artist": "System of a Down",
+            "cover": "assets/soad.png",
+            "file": "songs/aerials.mp3"
+        },
+        {
+            "_comment": "STARSET",
             "id": "monster",
             "title": "Monster",
             "artist": "Starset",

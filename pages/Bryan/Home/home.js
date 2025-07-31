@@ -243,7 +243,6 @@ document.addEventListener('DOMContentLoaded', async function () {
                         <h4>${song.title}</h4>
                         <p>${song.artist}</p>
                     </div>
-                    <i class="fas fa-play"></i>
                 `;
                 resultItem.addEventListener('click', () => {
                     player.loadAndPlaySong(song.id);
@@ -385,22 +384,6 @@ document.addEventListener('DOMContentLoaded', async function () {
         });
 
         elements.progressTrack.addEventListener('click', player.handleProgressClick);
-
-        // teclas de atalho
-        document.addEventListener('keydown', (e) => {
-            switch (e.code) {
-                case 'Space':
-                    e.preventDefault();
-                    elements.playPauseBtn.click();
-                    break;
-                case 'ArrowRight':
-                    elements.nextBtn.click();
-                    break;
-                case 'ArrowLeft':
-                    elements.prevBtn.click();
-                    break;
-            }
-        });
     };
 
     // inicia a aplicação
