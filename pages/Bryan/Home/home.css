@@ -271,6 +271,166 @@ body {
     margin-bottom: 20px;
 }
 
+/* Modal Styles - Improved */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-conteudo {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    color: white;
+    margin: 5% auto;
+    padding: 25px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal.show .modal-conteudo {
+    transform: translateY(0);
+}
+
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    color: #aaa;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.fechar:hover {
+    color: #ff4d4d;
+    transform: scale(1.2);
+}
+
+.modal-conteudo h2 {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 24px;
+    color: white;
+}
+
+.modal-conteudo ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.modal-conteudo li.musica-modal {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+}
+
+.modal-conteudo li.musica-modal:hover {
+    background: rgba(106, 39, 176, 0.2);
+    transform: translateX(5px);
+    border-left: 3px solid #9c27b0;
+}
+
+.modal-conteudo li.musica-modal img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.modal-conteudo li.musica-modal:hover img {
+    transform: scale(1.05);
+}
+
+.modal-conteudo li.musica-modal .info {
+    flex: 1;
+    min-width: 0;
+}
+
+.modal-conteudo li.musica-modal .info strong {
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal-conteudo li.musica-modal .info span {
+    font-size: 14px;
+    color: #bbb;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.modal-conteudo li.musica-modal button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-conteudo li.musica-modal button:hover {
+    background: #9c27b0;
+    transform: scale(1.1);
+}
+
+.modal-conteudo::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-conteudo::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.modal-conteudo::-webkit-scrollbar-thumb {
+    background: rgba(106, 39, 176, 0.5);
+    border-radius: 10px;
+}
+
+.modal-conteudo::-webkit-scrollbar-thumb:hover {
+    background: #9c27b0;
+}
+
 /* Seção de destaques */
 .featured-grid {
     display: grid;
@@ -539,14 +699,14 @@ body {
 }
 
 .progress-fill {
-    width: 30%;
+    width: 0%;
     height: 100%;
     background: #9c27b0;
     border-radius: 2px;
 }
 
 .volume-slider {
-    width: 100px;
+    width: 150px;
 }
 
 .volume-slider input {
@@ -557,6 +717,8 @@ body {
     height: 10px;
     border-radius: 15px;
 }
+
+
 
 /* Responsividade */
 @media (max-width: 1200px) {

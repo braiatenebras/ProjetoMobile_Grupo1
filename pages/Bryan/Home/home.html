@@ -7,7 +7,6 @@
     <title>Melodia - Início</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="home.css">
-
 </head>
 
 <body>
@@ -93,7 +92,8 @@
                 <div class="playlist-grid">
                     <div class="playlist-card">
                         <div class="playlist-image">
-                            <img src="assets/thisisslipknot.png" alt="Playlist">
+                            <img src="assets/thisisslipknot.png" data-modal="modalSlipknot" class="abrir-modal"
+                                alt="Playlist">
                             <button class="play-button"><i class="fas fa-play"></i></button>
                         </div>
                         <h3>This is Slipknot</h3>
@@ -101,7 +101,7 @@
                     </div>
                     <div class="playlist-card">
                         <div class="playlist-image">
-                            <img src="assets/thisisa7x.png" alt="Playlist">
+                            <img src="assets/thisisa7x.png" data-modal="modalA7X" class="abrir-modal" alt="Playlist">
                             <button class="play-button"><i class="fas fa-play"></i></button>
                         </div>
                         <h3>This is Avenged Sevenfold</h3>
@@ -109,15 +109,15 @@
                     </div>
                     <div class="playlist-card">
                         <div class="playlist-image">
-                            <img src="assets/thisisd4vd.png" alt="Playlist">
+                            <img src="assets/thisisd4vd.png" data-modal="modalD4VD" class="abrir-modal" alt="Playlist">
                             <button class="play-button"><i class="fas fa-play"></i></button>
                         </div>
-                        <h3>This is d4vd </h3>
+                        <h3>This is d4vd</h3>
                         <p>Com base no seu histórico</p>
                     </div>
                     <div class="playlist-card">
                         <div class="playlist-image">
-                            <img src="assets/thisissoad.png" alt="Playlist">
+                            <img src="assets/thisissoad.png" data-modal="modalSOAD" class="abrir-modal" alt="Playlist">
                             <button class="play-button"><i class="fas fa-play"></i></button>
                         </div>
                         <h3>This is System of a Down</h3>
@@ -130,7 +130,6 @@
             <section class="popular-artists">
                 <h2>Mais Ouvidas</h2>
                 <div class="artists-grid">
-
                     <div class="artist-card" data-id="alittlepieceofheaven">
                         <div class="artist-image">
                             <img src="assets/a7x.png" alt="Artista">
@@ -138,7 +137,6 @@
                         <h3>A Little Piece of Heaven</h3>
                         <p>Avenged Sevenfold</p>
                     </div>
-
                     <div class="artist-card" data-id="deadmemories">
                         <div class="artist-image">
                             <img src="assets/slipknot.png" alt="Artista">
@@ -146,7 +144,6 @@
                         <h3>Dead Memories</h3>
                         <p>Slipknot</p>
                     </div>
-
                     <div class="artist-card" data-id="tilwedie">
                         <div class="artist-image">
                             <img src="assets/slipknot.png" alt="Artista">
@@ -154,7 +151,6 @@
                         <h3>Til We Die</h3>
                         <p>Slipknot</p>
                     </div>
-
                     <div class="artist-card" data-id="nasuaestante">
                         <div class="artist-image">
                             <img src="assets/pitty.png" alt="Artista">
@@ -162,7 +158,6 @@
                         <h3>Na Sua Estante</h3>
                         <p>Pitty</p>
                     </div>
-
                     <div class="artist-card" data-id="intheend">
                         <div class="artist-image">
                             <img src="assets/linkinpark.png" alt="Artista">
@@ -170,7 +165,6 @@
                         <h3>In the End</h3>
                         <p>Linkin Park</p>
                     </div>
-
                     <div class="artist-card" data-id="monster">
                         <div class="artist-image">
                             <img src="assets/starset.png" alt="Artista">
@@ -178,7 +172,6 @@
                         <h3>Monster</h3>
                         <p>Starset</p>
                     </div>
-
                     <div class="artist-card" data-id="herewithme">
                         <div class="artist-image">
                             <img src="assets/d4vd.png" alt="Artista">
@@ -186,7 +179,7 @@
                         <h3>Here With Me</h3>
                         <p>d4vd</p>
                     </div>
-
+                </div>
             </section>
 
             <!-- Seção de Artistas em destaque -->
@@ -201,7 +194,6 @@
                         <h3>Avenged Sevenfold</h3>
                         <p>Os maiores sucessos do Avenged Sevenfold</p>
                     </div>
-
                     <div class="playlist-card">
                         <div class="playlist-image">
                             <img src="assets/slipknot.png" alt="Playlist">
@@ -210,7 +202,6 @@
                         <h3>Slipknot</h3>
                         <p>Os maiores sucessos do Slipknot</p>
                     </div>
-
                     <div class="playlist-card">
                         <div class="playlist-image">
                             <img src="assets/pitty.png" alt="Playlist">
@@ -219,7 +210,6 @@
                         <h3>Pitty</h3>
                         <p>Os maiores sucessos da Pitty</p>
                     </div>
-
                     <div class="playlist-card">
                         <div class="playlist-image">
                             <img src="assets/linkinpark.png" alt="Playlist">
@@ -228,13 +218,12 @@
                         <h3>Linkin Park</h3>
                         <p>Os maiores sucessos do Linkin Park</p>
                     </div>
-
                 </div>
-
+            </section>
         </main>
     </div>
 
-    <!-- Player de música  -->
+    <!-- Player de música -->
     <div class="music-player">
         <div class="player-left">
             <div class="song-info">
@@ -281,10 +270,135 @@
         <div class="nota-musical" style="--i:5"><i class="fas fa-music"></i></div>
     </div>
 
+    <!-- Modal Slipknot -->
+    <div id="modalSlipknot" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>This is Slipknot</h2>
+            <ul>
+                <li class="musica-modal" data-id="deadmemories">
+                    <img src="assets/slipknot.png" alt="Dead Memories">
+                    <div class="info">
+                        <strong>Dead Memories</strong>
+                        <span>Slipknot</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+                <li class="musica-modal" data-id="tilwedie">
+                    <img src="assets/slipknot.png" alt="Til We Die">
+                    <div class="info">
+                        <strong>Til We Die</strong>
+                        <span>Slipknot</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal A7X -->
+    <div id="modalA7X" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>This is Avenged Sevenfold</h2>
+            <ul>
+                <li class="musica-modal" data-id="alittlepieceofheaven">
+                    <img src="assets/a7x.png" alt="A Little Piece of Heaven">
+                    <div class="info">
+                        <strong>A Little Piece of Heaven</strong>
+                        <span>Avenged Sevenfold</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+                <li class="musica-modal" data-id="sofaraway">
+                    <img src="assets/a7x.png" alt="So Far Away">
+                    <div class="info">
+                        <strong>So Far Away</strong>
+                        <span>Avenged Sevenfold</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+                <li class="musica-modal" data-id="batcountry">
+                    <img src="assets/a7x.png" alt="Bat Country">
+                    <div class="info">
+                        <strong>Bat Country</strong>
+                        <span>Avenged Sevenfold</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal d4vd -->
+    <div id="modalD4VD" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>This is d4vd</h2>
+            <ul>
+                <li class="musica-modal" data-id="herewithme">
+                    <img src="assets/d4vd.png" alt="Here With Me">
+                    <div class="info">
+                        <strong>Here With Me</strong>
+                        <span>d4vd</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+                <li class="musica-modal" data-id="romantichomicide">
+                    <img src="assets/d4vd.png" alt="Romantic Homicide">
+                    <div class="info">
+                        <strong>Romantic Homicide</strong>
+                        <span>d4vd</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+                <li class="musica-modal" data-id="sleepwell">
+                    <img src="assets/d4vd.png" alt="Sleep Well">
+                    <div class="info">
+                        <strong>Sleep Well</strong>
+                        <span>d4vd</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal SOAD -->
+    <div id="modalSOAD" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>This is System of a Down</h2>
+            <ul>
+                <li class="musica-modal" data-id="chopsuey">
+                    <img src="assets/soad.png" alt="Chop Suey!">
+                    <div class="info">
+                        <strong>Chop Suey!</strong>
+                        <span>System of a Down</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+                <li class="musica-modal" data-id="toxicity">
+                    <img src="assets/soad.png" alt="Toxicity">
+                    <div class="info">
+                        <strong>Toxicity</strong>
+                        <span>System of a Down</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+                <li class="musica-modal" data-id="aerials">
+                    <img src="assets/soad.png" alt="Aerials">
+                    <div class="info">
+                        <strong>Aerials</strong>
+                        <span>System of a Down</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <script src="home.js"></script>
-
-
-
 </body>
 
 </html>

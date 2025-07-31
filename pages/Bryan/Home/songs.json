@@ -33,11 +33,7 @@
             "title": "In the End",
             "artist": "Linkin Park",
             "cover": "assets/linkinpark.png",
-            "file": "songs/intheend.mp3",
-            "keywords": [
-                "Linkin Park",
-                "in the end"
-            ]
+            "file": "songs/intheend.mp3"
         },
         {
             "id": "herewithme",
