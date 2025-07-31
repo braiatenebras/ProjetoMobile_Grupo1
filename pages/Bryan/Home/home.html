@@ -26,7 +26,7 @@
             <div id="search-results" class="search-results"></div>
         </div>
         <div class="navbar-right">
-            <a href="#" class="user-profile">
+            <a href="/../pages/Bryan/Login/login.html" class="user-profile">
                 <i class="fa-solid fa-circle-user" alt="Perfil"></i>
             </a>
         </div>
@@ -126,7 +126,7 @@
                 </div>
             </section>
 
-            <!-- Seção de artistas populares -->
+            <!-- Seção de mais ouvidas -->
             <section class="popular-artists">
                 <h2>Mais Ouvidas</h2>
                 <div class="artists-grid">
@@ -188,15 +188,17 @@
                 <div class="playlist-grid">
                     <div class="playlist-card">
                         <div class="playlist-image">
-                            <img src="assets/a7x.png" alt="Playlist">
+                            <img src="assets/a7x.png" data-modal="modalA7X" class="abrir-modal" alt="Playlist">
                             <button class="play-button"><i class="fas fa-play"></i></button>
                         </div>
                         <h3>Avenged Sevenfold</h3>
                         <p>Os maiores sucessos do Avenged Sevenfold</p>
                     </div>
+
                     <div class="playlist-card">
                         <div class="playlist-image">
-                            <img src="assets/slipknot.png" alt="Playlist">
+                            <img src="assets/slipknot.png" data-modal="modalSlipknot" class="abrir-modal"
+                                alt="Playlist">
                             <button class="play-button"><i class="fas fa-play"></i></button>
                         </div>
                         <h3>Slipknot</h3>
@@ -204,7 +206,7 @@
                     </div>
                     <div class="playlist-card">
                         <div class="playlist-image">
-                            <img src="assets/pitty.png" alt="Playlist">
+                            <img src="assets/pitty.png" data-modal="modalPitty" class="abrir-modal" alt="Playlist">
                             <button class="play-button"><i class="fas fa-play"></i></button>
                         </div>
                         <h3>Pitty</h3>
@@ -212,7 +214,8 @@
                     </div>
                     <div class="playlist-card">
                         <div class="playlist-image">
-                            <img src="assets/linkinpark.png" alt="Playlist">
+                            <img src="assets/linkinpark.png" data-modal="modalLinkinPark" class="abrir-modal"
+                                alt="Playlist">
                             <button class="play-button"><i class="fas fa-play"></i></button>
                         </div>
                         <h3>Linkin Park</h3>
@@ -274,7 +277,7 @@
     <div id="modalSlipknot" class="modal">
         <div class="modal-conteudo">
             <span class="fechar">&times;</span>
-            <h2>This is Slipknot</h2>
+            <h2>Slipknot</h2>
             <ul>
                 <li class="musica-modal" data-id="deadmemories">
                     <img src="assets/slipknot.png" alt="Dead Memories">
@@ -308,7 +311,7 @@
     <div id="modalA7X" class="modal">
         <div class="modal-conteudo">
             <span class="fechar">&times;</span>
-            <h2>This is Avenged Sevenfold</h2>
+            <h2>Avenged Sevenfold</h2>
             <ul>
                 <li class="musica-modal" data-id="alittlepieceofheaven">
                     <img src="assets/a7x2.png" alt="A Little Piece of Heaven">
@@ -350,7 +353,7 @@
     <div id="modalD4VD" class="modal">
         <div class="modal-conteudo">
             <span class="fechar">&times;</span>
-            <h2>This is d4vd</h2>
+            <h2>d4vd</h2>
             <ul>
                 <li class="musica-modal" data-id="herewithme">
                     <img src="assets/d4vd.png" alt="Here With Me">
@@ -384,7 +387,7 @@
     <div id="modalSOAD" class="modal">
         <div class="modal-conteudo">
             <span class="fechar">&times;</span>
-            <h2>This is System of a Down</h2>
+            <h2>System of a Down</h2>
             <ul>
                 <li class="musica-modal" data-id="chopsuey">
                     <img src="assets/soad.png" alt="Chop Suey!">
@@ -407,6 +410,58 @@
                     <div class="info">
                         <strong>Aerials</strong>
                         <span>System of a Down</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal Pitty -->
+    <div id="modalPitty" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Pitty</h2>
+            <ul>
+                <li class="musica-modal" data-id="nasuaestante">
+                    <img src="assets/pitty.png" alt="Na Sua Estante">
+                    <div class="info">
+                        <strong>Na Sua Estante</strong>
+                        <span>Pitty</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+                <li class="musica-modal" data-id="meadivertir">
+                    <img src="assets/pitty.png" alt="Me Adora">
+                    <div class="info">
+                        <strong>Equalize</strong>
+                        <span>Pitty</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div id="modalLinkinPark" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar">&times;</span>
+            <h2>Linkin Park</h2>
+            <ul>
+                <li class="musica-modal" data-id="intheend">
+                    <img src="assets/linkinpark.png" alt="In the End">
+                    <div class="info">
+                        <strong>In the End</strong>
+                        <span>Linkin Park</span>
+                    </div>
+                    <button><i class="fas fa-play"></i></button>
+                </li>
+                <li class="musica-modal" data-id="numb">
+                    <img src="assets/linkinpark.png" alt="Numb">
+                    <div class="info">
+                        <strong>Numb</strong>
+                        <span>Linkin Park</span>
                     </div>
                     <button><i class="fas fa-play"></i></button>
                 </li>
