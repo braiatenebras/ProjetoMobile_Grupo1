@@ -389,3 +389,4 @@ document.addEventListener('DOMContentLoaded', async function () {
     // inicia a aplicação
     init();
 });
+

@@ -64,12 +64,44 @@
             "file": "songs/nasuaestante.mp3"
         },
         {
+            "_comment": "PITTY",
+            "id": "equalize",
+            "title": "Equalize",
+            "artist": "Pitty",
+            "cover": "assets/pitty2.png",
+            "file": "songs/equalize.mp3"
+        },
+        {
             "_comment": "LINKIN PARK",
             "id": "intheend",
             "title": "In the End",
             "artist": "Linkin Park",
             "cover": "assets/linkinpark.png",
             "file": "songs/intheend.mp3"
+        },
+        {
+            "_comment": "LINKIN PARK",
+            "id": "numb",
+            "title": "Numb",
+            "artist": "Linkin Park",
+            "cover": "assets/linkinpark2.png",
+            "file": "songs/numb.mp3"
+        },
+        {
+            "_comment": "LINKIN PARK",
+            "id": "crawling",
+            "title": "Crawling",
+            "artist": "Linkin Park",
+            "cover": "assets/linkinpark.png",
+            "file": "songs/crawling.mp3"
+        },
+        {
+            "_comment": "D4VD",
+            "id": "herewithme",
+            "title": "Here With Me",
+            "artist": "d4vd",
+            "cover": "assets/d4vd.png",
+            "file": "songs/herewithme.mp3"
         },
         {
             "_comment": "D4VD",

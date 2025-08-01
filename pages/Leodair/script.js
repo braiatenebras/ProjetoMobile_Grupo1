@@ -35,7 +35,7 @@ async function searchSongs() {
     showResults(data.tracks.items);
   } catch (error) {
     console.error('Error:', error);
-    document.getElementById('results').innerHTML = '<p>Erro ao buscar músicas (provavelmente o token da api expirou)</p>';
+    document.getElementById('results').innerHTML = '<p>Erro ao buscar músicas (adicione o token da api)</p>';
   }
 }
 
@@ -60,3 +60,4 @@ function showResults(songs) {
     resultsDiv.appendChild(songDiv);
   });
 }
+
