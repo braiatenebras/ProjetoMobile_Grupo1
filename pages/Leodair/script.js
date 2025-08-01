@@ -60,4 +60,3 @@ function showResults(songs) {
     resultsDiv.appendChild(songDiv);
   });
 }
-
