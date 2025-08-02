@@ -5,6 +5,10 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body::-webkit-scrollbar {
+    display: none;
+}
+
 body {
     background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
     color: white;
@@ -792,10 +796,6 @@ body {
 
     .player-center {
         width: 40%;
-    }
-
-    .player-controls {
-        gap: 10px;
     }
 
     .volume-slider {

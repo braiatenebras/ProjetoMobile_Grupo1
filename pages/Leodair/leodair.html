@@ -64,9 +64,45 @@
             <div id="results"></div>
         </div>
     </div>
+
+        <!-- Player de música -->
+    <div class="music-player">
+        <div class="player-left">
+            <div class="song-info">
+                <img id="current-album-cover" src="/pages/Bryan/Home/assets/nothing.png" alt="Capa do Álbum">
+                <div class="song-details">
+                    <h4 id="current-song-title">Não está tocando nada</h4>
+                    <p id="current-song-artist">Escolha uma música ai</p>
+                </div>
+            </div>
+        </div>
+        <div class="player-center">
+            <div class="player-controls">
+                <button id="shuffle-btn"><i class="fas fa-random"></i></button>
+                <button id="prev-btn"><i class="fas fa-step-backward"></i></button>
+                <button id="play-pause-btn" class="play-pause"><i class="fas fa-pause"></i></button>
+                <button id="next-btn"><i class="fas fa-step-forward"></i></button>
+                <button id="repeat-btn"><i class="fas fa-redo"></i></button>
+            </div>
+            <div class="progress-bar">
+                <span id="current-time">0:00</span>
+                <div class="progress-track">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <span id="duration">3:45</span>
+            </div>
+        </div>
+        <div class="player-right">
+            <button id="playlist-btn"><i class="fas fa-list"></i></button>
+            <button id="mute-btn"><i class="fas fa-volume-up"></i></button>
+            <div class="volume-slider">
+                <input id="volume-control" type="range" min="0" max="100" value="80">
+            </div>
+        </div>
+        <audio id="audio-player"></audio>
+    </div>
     
     <script src="script.js"></script>
-
 </body>
 
 </html>
