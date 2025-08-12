@@ -3,11 +3,11 @@ let ACCESS_TOKEN = '';
 async function getAccessToken() {
   const response = await fetch('/.netlify/functions/get-spotify-token');
   const data = await response.json();
-
+  
   if (!response.ok) {
-    throw new Error(data.error || 'Failed to get access token');
+      throw new Error(data.error || 'Failed to get access token');
   }
-
+  
   return data.accessToken;
 }
 
@@ -19,7 +19,8 @@ async function searchSongs() {
     if (!ACCESS_TOKEN) {
       ACCESS_TOKEN = await getAccessToken();
     }
-
+    
+    // A URL CORRETA para a busca está aqui: https://api.spotify.com/v1/search
     const response = await fetch(`https://api.spotify.com/v1/search?q=${encodeURIComponent(query)}&type=track&limit=12`, {
       headers: {
         'Authorization': 'Bearer ' + ACCESS_TOKEN
