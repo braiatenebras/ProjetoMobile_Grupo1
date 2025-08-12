@@ -351,7 +351,26 @@ document.addEventListener('DOMContentLoaded', async function () {
         // configura modais
         modals.setupModals();
 
-        // configura event listeners
+        // Adiciona event listeners para os cards de playlists
+        document.querySelectorAll('.featured-card[data-playlist="random"]').forEach(card => {
+            card.addEventListener('click', () => {
+                if (state.songIds.length === 0) return;
+
+                // Seleciona uma música aleatória
+                const randomIndex = Math.floor(Math.random() * state.songIds.length);
+                const randomSongId = state.songIds[randomIndex];
+
+                // Toca a música selecionada
+                player.loadAndPlaySong(randomSongId);
+
+                // Animação de clique
+                card.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    card.style.transform = '';
+                }, 200);
+            });
+        });
+
         elements.searchInput.addEventListener('input', () => search.searchSongs(elements.searchInput.value));
         elements.searchBtn.addEventListener('click', () => search.searchSongs(elements.searchInput.value));
 
