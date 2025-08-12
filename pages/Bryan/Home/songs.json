@@ -33,6 +33,86 @@
             "file": "songs/buriedalive.mp3"
         },
         {
+            "_comment": "AVENGED SEVENFOLD",
+            "id": "mia",
+            "title": "M.I.A.",
+            "artist": "Avenged Sevenfold",
+            "cover": "assets/a7x3.png",
+            "file": "songs/mia.mp3"
+        },
+        {
+            "_comment": "AVENGED SEVENFOLD",
+            "id": "batcountry",
+            "title": "Bat Country",
+            "artist": "Avenged Sevenfold",
+            "cover": "assets/a7x3.png",
+            "file": "songs/batcountry.mp3"
+        },
+        {
+            "_comment": "AVENGED SEVENFOLD",
+            "id": "gunslinger",
+            "title": "Gunslinger",
+            "artist": "Avenged Sevenfold",
+            "cover": "assets/a7x2.png",
+            "file": "songs/gunslinger.mp3"
+        },
+        {
+            "_comment": "AVENGED SEVENFOLD",
+            "id": "unholyconfessions",
+            "title": "Unholy Confessions",
+            "artist": "Avenged Sevenfold",
+            "cover": "assets/a7x2.png",
+            "file": "songs/unholyconfessions.mp3"
+        },
+        {
+            "_comment": "AVENGED SEVENFOLD",
+            "id": "heretic",
+            "title": "Heretic",
+            "artist": "Avenged Sevenfold",
+            "cover": "assets/a7x2.png",
+            "file": "songs/heretic.mp3"
+        },
+        {
+            "_comment": "AVENGED SEVENFOLD",
+            "id": "naturalbornkiller",
+            "title": "Natural Born Killer",
+            "artist": "Avenged Sevenfold",
+            "cover": "assets/a7x.png",
+            "file": "songs/naturalbornkiller.mp3"
+        },
+        {
+            "_comment": "SLIPKNOT",
+            "id": "psychosocial",
+            "title": "Psychosocial",
+            "artist": "Slipknot",
+            "cover": "assets/slipknot.png",
+            "file": "songs/psychosocial.mp3"
+        },
+        {
+            "_comment": "SLIPKNOT",
+            "id": "vermilionpt2",
+            "title": "Vermillion Pt. 2",
+            "artist": "Slipknot",
+            "cover": "assets/slipknot2.png",
+            "file": "songs/vermilionpt2.mp3"
+        },
+        {
+            "_comment": "SLIPKNOT",
+            "id": "unsainted",
+            "title": "Unsainted",
+            "artist": "Slipknot",
+            "cover": "https://cdn-images.dzcdn.net/images/cover/fdc2196c15fbf2ee91881a78af4da153/0x1900-000000-80-0-0.jpg",
+            "file": "songs/unsainted.mp3"
+        },
+        {
+            "_comment": "SLIPKNOT",
+            "id": "beforeiforget",
+            "title": "Before I Forget",
+            "artist": "Slipknot",
+            "cover": "assets/slipknot2.png",
+            "file": "songs/beforeiforget.mp3"
+        },
+        {
             "_comment": "SLIPKNOT",
             "id": "duality",
             "title": "Duality",
@@ -54,6 +134,13 @@
             "artist": "Slipknot",
             "cover": "assets/slipknot.png",
             "file": "songs/tilwedie.mp3"
+        },
+        {
+            "id": "snuff",
+            "title": "Snuff",
+            "artist": "Slipknot",
+            "cover": "assets/slipknot.png",
+            "file": "songs/snuff.mp3"
         },
         {
             "_comment": "PITTY",
@@ -88,20 +175,12 @@
             "file": "songs/numb.mp3"
         },
         {
-            "_comment": "LINKIN PARK",
-            "id": "crawling",
-            "title": "Crawling",
-            "artist": "Linkin Park",
-            "cover": "assets/linkinpark.png",
-            "file": "songs/crawling.mp3"
-        },
-        {
             "_comment": "D4VD",
-            "id": "herewithme",
-            "title": "Here With Me",
+            "id": "feelit",
+            "title": "Feel It",
             "artist": "d4vd",
             "cover": "assets/d4vd.png",
-            "file": "songs/herewithme.mp3"
+            "file": "songs/feelit.mp3"
         },
         {
             "_comment": "D4VD",
@@ -135,6 +214,13 @@
             "cover": "assets/soad.png",
             "file": "songs/chopsuey.mp3"
         },
+           {
+            "id": "IEAIAIO",
+            "title": "I-E-A-I-A-I-O",
+            "artist": "System of a Down",
+            "cover": "assets/soad.png",
+            "file": "songs/ieaiaio.mp3"
+        },
         {
             "id": "toxicity",
             "title": "Toxicity",
@@ -150,12 +236,18 @@
             "file": "songs/aerials.mp3"
         },
         {
-            "_comment": "STARSET",
-            "id": "monster",
-            "title": "Monster",
-            "artist": "Starset",
-            "cover": "assets/starset.png",
-            "file": "songs/monster.mp3"
+            "id": "sadstatue",
+            "title": "Sad Statue",
+            "artist": "System of a Down",
+            "cover": "assets/soad.png",
+            "file": "songs/sadstatue.mp3"
+        },
+        {
+            "id": "lonelyday",
+            "title": "Lonely Day",
+            "artist": "System of a Down",
+            "cover": "assets/soad.png",
+            "file": "songs/lonelyday.mp3"
         }
     ]
 }
