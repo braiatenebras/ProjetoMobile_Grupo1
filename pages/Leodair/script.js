@@ -1,5 +1,5 @@
-const CLIENT_ID = 'client id';
-const CLIENT_SECRET = 'client secret';
+const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
+const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
 let ACCESS_TOKEN = '';
 
 async function getAccessToken() {
@@ -35,7 +35,7 @@ async function searchSongs() {
     showResults(data.tracks.items);
   } catch (error) {
     console.error('Error:', error);
-    document.getElementById('results').innerHTML = '<p>Erro ao buscar músicas (adicione o token da api)</p>';
+    document.getElementById('results').innerHTML = '<p>Erro ao buscar músicas. Verifique a chave da API e a conexão.</p>';
   }
 }
 
@@ -52,11 +52,11 @@ function showResults(songs) {
     const songDiv = document.createElement('div');
     songDiv.className = 'song';
     songDiv.innerHTML = `
-            <img src="${song.album.images[0]?.url || 'https://via.placeholder.com/150'}" alt="${song.name}">
-            <h3>${song.name}</h3>
-            <p>${song.artists.map(artist => artist.name).join(', ')}</p>
-            <p>${song.album.name}</p>
-        `;
+      <img src="${song.album.images[0]?.url || 'https://via.placeholder.com/150'}" alt="${song.name}">
+      <h3>${song.name}</h3>
+      <p>${song.artists.map(artist => artist.name).join(', ')}</p>
+      <p>${song.album.name}</p>
+    `;
     resultsDiv.appendChild(songDiv);
   });
 }
