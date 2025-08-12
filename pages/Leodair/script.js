@@ -1,19 +1,14 @@
-const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
-const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
 let ACCESS_TOKEN = '';
 
 async function getAccessToken() {
-  const response = await fetch('https://accounts.spotify.com/api/token', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      'Authorization': 'Basic ' + btoa(CLIENT_ID + ':' + CLIENT_SECRET)
-    },
-    body: 'grant_type=client_credentials'
-  });
-
+  const response = await fetch('/.netlify/functions/get-spotify-token');
   const data = await response.json();
-  return data.access_token;
+
+  if (!response.ok) {
+    throw new Error(data.error || 'Failed to get access token');
+  }
+
+  return data.accessToken;
 }
 
 async function searchSongs() {
@@ -35,7 +30,7 @@ async function searchSongs() {
     showResults(data.tracks.items);
   } catch (error) {
     console.error('Error:', error);
-    document.getElementById('results').innerHTML = '<p>Erro ao buscar músicas. Verifique a chave da API e a conexão.</p>';
+    document.getElementById('results').innerHTML = '<p>Erro ao buscar músicas. Verifique a API e a conexão.</p>';
   }
 }
 
