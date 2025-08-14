@@ -1,63 +1,72 @@
-# README do Projeto Escolar - Melodia
+# Melodia 🎵
 
-## Descrição do Projeto
+Plataforma de streaming de música desenvolvida como projeto escolar na disciplina de Programação Mobile. O **Melodia** permite que usuários explorem, pesquisem e escutem músicas de maneira simples e intuitiva, contando com integração à API do Spotify e autenticação via Firebase.
 
-O **Melodia** é uma plataforma de streaming de música desenvolvida por 5 alunos direcionado a um projeto escolar na matéria Programação Mobile. O site permite que os usuários explorem, pesquisem e ouçam suas músicas favoritas de forma intuitiva e agradável. Com uma interface amigável e recursos interativos, o Melodia oferece uma experiência única para os amantes da música.
+---
 
-## Funcionalidades
+## ✨ Funcionalidades Principais
 
-- **Navegação Intuitiva**: O site possui uma barra de navegação que permite fácil acesso às principais seções, como Início, Explorar e Biblioteca.
-  
-- **Pesquisa de Músicas**: Os usuários podem pesquisar suas músicas favoritas através de uma barra de pesquisa, que utiliza a API do Spotify para retornar resultados em tempo real.
+- **Navegação Intuitiva:** Barra de navegação para acesso rápido às seções principais: Início, Explorar e Biblioteca.
+- **Pesquisa Inteligente:** Busca por músicas e artistas em tempo real utilizando a API do Spotify.
+- **Playlists Personalizadas:** Recomendações automáticas baseadas no histórico do usuário e possibilidade de criar playlists próprias.
+- **Reprodutor Integrado:** Player de música embutido para escutar faixas diretamente no site.
+- **Visualização de Artistas e Playlists:** Modais exibem informações detalhadas e permitem reprodução imediata das músicas selecionadas.
+- **Autenticação de Usuários:** Login via Firebase, garantindo recursos personalizados a cada usuário.
 
-- **Playlists Personalizadas**: O Melodia oferece playlists recomendadas com base no histórico de escuta do usuário, além de permitir a criação de novas playlists.
+---
 
-- **Reprodutor de Música**: Um reprodutor de música integrado permite que os usuários ouçam as músicas disponiveis pelo website.
+## 🗂️ Estrutura do Projeto
 
-- **Modais de Artistas**: Ao clicar em um artista ou playlist, os usuários podem visualizar uma lista de músicas disponíveis, com a opção de reproduzi-las diretamente.
+O sistema é composto por diferentes páginas, cada uma com uma função específica:
 
-## Estrutura do Projeto
+- **Home:** Destaques e playlists recomendadas.
+- **Biblioteca:** Acesso ao catálogo completo de músicas disponíveis.
+- **Explorar:** Busca e descoberta de músicas e artistas.
+- **Login:** Tela de autenticação de usuários.
 
-O projeto é dividido em várias páginas, cada uma com suas respectivas funcionalidades:
+---
 
-1. **Home**: Página inicial com playlists em destaque e recomendações personalizadas.
-2. **Biblioteca**: Lista completa de músicas disponíveis no site, permitindo que os usuários explorem todo o conteúdo.
-3. **Explorar**: Seção dedicada à pesquisa de músicas e artistas, com uma interface de busca.
-4. **Login**: Página de autenticação para usuários, permitindo acesso a funcionalidades personalizadas.
+## 📸 Demonstrações (Capturas de Tela)
 
-## Capturas de Tela
+- **Página Inicial:**  
+  ![Página Inicial](assets/home.png)
 
-### Página Inicial
-![Página Inicial](assets/home.png)
+- **Biblioteca:**  
+  ![Biblioteca](assets/biblioteca.png)
 
-### Biblioteca
-![Biblioteca](assets/biblioteca.png)
+- **Explorar:**  
+  ![Explorar](assets/explorar.png)
 
-### Explorar
-![Explorar](assets/explorar.png)
+- **Login:**  
+  ![Login](assets/login.png)
 
-### Login
-![Login](assets/login.png)
+---
 
-## Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
-- **HTML**: Estruturação das páginas.
-- **CSS**: Estilização e design responsivo.
-- **JavaScript**: Interatividade e manipulação do DOM.
-- **API do Spotify**: Integração para busca e reprodução de músicas.
-- **Firebase**: Autenticação de usuários.
+- **HTML5:** Estrutura das páginas.
+- **CSS3:** Estilização responsiva.
+- **JavaScript:** Lógica e interatividade.
+- **API do Spotify:** Busca e reprodução de músicas.
+- **Firebase:** Autenticação de usuários.
 
-## Como Visualiar o Projeto 
+---
 
-1. Acesse o link na descrição do repósitorio ou ao link abaixo:
-- http://trabalhomobile.netlify.app/
+## 🚀 Como Visualizar o Projeto
 
-# Desenvolvedores:
-- **Bryan Kauan**
-- **Ana Roberta**
-- **Mayara Tsuchida**
-- **Leodair Erik**
-- **Lucas Cerqueira**
+1. Acesse: [trabalhomobile.netlify.app](http://trabalhomobile.netlify.app/)  
+2. Faça login para acessar funcionalidades personalizadas.
 
+---
 
+## 👨‍💻 Equipe Desenvolvedora
 
+- Bryan Kauan
+- Ana Roberta
+- Mayara Tsuchida
+- Leodair Erik
+- Lucas Cerqueira
+
+---
+
+> Projeto desenvolvido para fins educacionais – Programação Mobile.
