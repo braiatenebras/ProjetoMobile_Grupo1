@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-O **Melodia** é uma plataforma de streaming de música desenvolvida por Bryan Kauan, Ana Roberta, Mayara Tsuchida, Lucas Cerqueira e Leodair Erik. O site permite que os usuários explorem, pesquisem e ouçam suas músicas favoritas de forma intuitiva e agradável. Com uma interface amigável e recursos interativos, o Melodia oferece uma experiência única para os amantes da música.
+O **Melodia** é uma plataforma de streaming de música desenvolvida por 5 alunos direcionado a um projeto escolar na matéria Programação Mobile. O site permite que os usuários explorem, pesquisem e ouçam suas músicas favoritas de forma intuitiva e agradável. Com uma interface amigável e recursos interativos, o Melodia oferece uma experiência única para os amantes da música.
 
 ## Funcionalidades
 
@@ -58,3 +58,4 @@ O projeto é dividido em várias páginas, cada uma com suas respectivas funcion
 - **Mayara Tsuchida**.
 - **Leodair Erik**.
 - **Lucas Cerqueira**.
+
