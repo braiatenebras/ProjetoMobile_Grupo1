@@ -12,7 +12,7 @@ O **Melodia** é uma plataforma de streaming de música desenvolvida por 5 aluno
 
 - **Playlists Personalizadas**: O Melodia oferece playlists recomendadas com base no histórico de escuta do usuário, além de permitir a criação de novas playlists.
 
-- **Reprodutor de Música**: Um reprodutor de música integrado permite que os usuários ouçam suas faixas favoritas, com controles para reproduzir, pausar, avançar e retroceder as músicas.
+- **Reprodutor de Música**: Um reprodutor de música integrado permite que os usuários ouçam as músicas disponiveis pelo website.
 
 - **Modais de Artistas**: Ao clicar em um artista ou playlist, os usuários podem visualizar uma lista de músicas disponíveis, com a opção de reproduzi-las diretamente.
 
@@ -58,5 +58,6 @@ O projeto é dividido em várias páginas, cada uma com suas respectivas funcion
 - **Mayara Tsuchida**
 - **Leodair Erik**
 - **Lucas Cerqueira**
+
 
 
