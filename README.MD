@@ -49,6 +49,12 @@ O projeto é dividido em várias páginas, cada uma com suas respectivas funcion
 
 ## Como Visualiar o Projeto 
 
-1. Acesse o link na descriçãp do repósitorio ou ao link abaixo:
+1. Acesse o link na descrição do repósitorio ou ao link abaixo:
   http://trabalhomobile.netlify.app/
-  
+
+# Desenvolvedores:
+- **Bryan Kauan**.
+- **Ana Roberta**.
+- **Mayara Tsuchida**.
+- **Leodair Erik**.
+- **Lucas Cerqueira**.
