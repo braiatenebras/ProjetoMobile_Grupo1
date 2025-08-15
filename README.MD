@@ -7,7 +7,7 @@ Plataforma de streaming de música desenvolvida como projeto escolar na discipli
 ## ✨ Funcionalidades Principais
 
 - **Navegação Intuitiva:** Barra de navegação para acesso rápido às seções principais: Início, Explorar e Biblioteca.
-- **Pesquisa Inteligente:** Busca por músicas e artistas em tempo real utilizando a API do Spotify.
+- **Pesquisa Inteligente:** Busca por músicas e artistas em tempo real utilizando a API do Spotify. (https://developer.spotify.com/documentation/web-api)
 - **Reprodutor Integrado:** Player de música embutido para escutar faixas diretamente no site.
 - **Visualização de Artistas e Playlists:** Modais exibem informações detalhadas e permitem reprodução imediata das músicas selecionadas.
 - **Autenticação de Usuários:** Login via Firebase.
@@ -74,6 +74,7 @@ O sistema é composto por diferentes páginas, cada uma com uma função especí
 ---
 
 > Projeto desenvolvido para fins educacionais – Programação Mobile.
+
 
 
 
