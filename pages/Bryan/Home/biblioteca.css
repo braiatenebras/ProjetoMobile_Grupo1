@@ -153,6 +153,9 @@ h2 {
 
 .playlists {
     margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .playlists h3 {
