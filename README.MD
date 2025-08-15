@@ -28,9 +28,11 @@ O sistema é composto por diferentes páginas, cada uma com uma função especí
 ## 📸 Demonstrações (Capturas de Tela)
 
 - **Login:**  
-<img src="prints/login.png" alt="Login" width="200">
-<img src="prints/login2.png" alt="Login" width="200">
-<img src="prints/login3.png" alt="Login" width="200">
+<p>
+  <img src="prints/login.png" alt="Login" width="200" style="margin-right: 10px;">
+  <img src="prints/login2.png" alt="Login" width="200" style="margin-right: 10px;">
+  <img src="prints/login3.png" alt="Login" width="200">
+</p>
 
 
 - **Página Inicial:**  
@@ -72,6 +74,7 @@ O sistema é composto por diferentes páginas, cada uma com uma função especí
 ---
 
 > Projeto desenvolvido para fins educacionais – Programação Mobile.
+
 
 
 
