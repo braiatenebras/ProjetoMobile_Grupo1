@@ -29,16 +29,16 @@ O sistema é composto por diferentes páginas, cada uma com uma função especí
 ## 📸 Demonstrações (Capturas de Tela)
 
 - **Página Inicial:**  
-  ![Página Inicial](assets/home.png)
+  ![Página Inicial](prints/home.png)
 
 - **Biblioteca:**  
-  ![Biblioteca](assets/biblioteca.png)
+  ![Biblioteca](prints/biblioteca.png)
 
 - **Explorar:**  
-  ![Explorar](assets/explorar.png)
+  ![Explorar](prints/explorar.png)
 
 - **Login:**  
-  ![Login](assets/login.png)
+  ![Login](prints/login.png)
 
 ---
 
