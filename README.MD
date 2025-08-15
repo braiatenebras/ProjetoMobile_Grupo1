@@ -8,10 +8,9 @@ Plataforma de streaming de música desenvolvida como projeto escolar na discipli
 
 - **Navegação Intuitiva:** Barra de navegação para acesso rápido às seções principais: Início, Explorar e Biblioteca.
 - **Pesquisa Inteligente:** Busca por músicas e artistas em tempo real utilizando a API do Spotify.
-- **Playlists Personalizadas:** Recomendações automáticas baseadas no histórico do usuário e possibilidade de criar playlists próprias.
 - **Reprodutor Integrado:** Player de música embutido para escutar faixas diretamente no site.
 - **Visualização de Artistas e Playlists:** Modais exibem informações detalhadas e permitem reprodução imediata das músicas selecionadas.
-- **Autenticação de Usuários:** Login via Firebase, garantindo recursos personalizados a cada usuário.
+- **Autenticação de Usuários:** Login via Firebase.
 
 ---
 
@@ -28,6 +27,9 @@ O sistema é composto por diferentes páginas, cada uma com uma função especí
 
 ## 📸 Demonstrações (Capturas de Tela)
 
+- **Login:**  
+<img src="prints/login.png" alt="Login" width="200">
+
 - **Página Inicial:**  
 <img src="prints/home.png" alt="Página Inicial" width="200">
 
@@ -35,10 +37,7 @@ O sistema é composto por diferentes páginas, cada uma com uma função especí
 <img src="prints/biblioteca.png" alt="Biblioteca" width="200">
 
 - **Explorar:**  
-<img src="prints/explorar.png" alt="Explorar" width="200">
-
-- **Login:**  
-<img src="prints/login.png" alt="Login" width="200">
+<img src="prints/explorar1.png" alt="Explorar" width="200">
 
 ---
 
@@ -55,7 +54,7 @@ O sistema é composto por diferentes páginas, cada uma com uma função especí
 ## 🚀 Como Visualizar o Projeto
 
 1. Acesse: [trabalhomobile.netlify.app](http://trabalhomobile.netlify.app/)  
-2. Faça login para acessar funcionalidades personalizadas.
+2. Faça login para acessar o website.
 
 ---
 
@@ -70,6 +69,7 @@ O sistema é composto por diferentes páginas, cada uma com uma função especí
 ---
 
 > Projeto desenvolvido para fins educacionais – Programação Mobile.
+
 
 
 
